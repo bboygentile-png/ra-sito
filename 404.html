@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pagina non trovata · Reality Architecture</title>
+<script>
+/* Sul dominio nudo realityarchitecture.it ogni percorso sconosciuto prosegue sulle pagine del funnel (www, Systeme),
+   come faceva il vecchio repo realityarchitecture-redirect. Sull'anteprima github.io mostra la pagina qui sotto. */
+(function () {
+  if (location.hostname === 'realityarchitecture.it') {
+    location.replace('https://www.realityarchitecture.it' + location.pathname.replace(/\/$/, '') + location.search + location.hash);
+  }
+})();
+</script>
+<style>
+:root{--viola:#140b26;--oro:#E8C46A;--crema:#FBF7F0;--lilla:#C9BFE6}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:radial-gradient(70% 60% at 50% 0%,#3B1F5C,var(--viola) 70%);color:var(--crema);font:400 1.05rem/1.7 'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center}
+main{max-width:520px}
+p.k{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--oro);margin:0 0 18px}
+h1{font:500 clamp(2rem,6vw,3rem)/1.15 'Lora',Georgia,serif;margin:0 0 16px}
+h1 em{color:var(--oro)}
+p{color:var(--lilla);margin:0 0 30px}
+a.b{display:inline-block;padding:15px 28px;border-radius:999px;background:linear-gradient(135deg,#F1D58A,#C9973F 60%,#A8762D);color:#1D1A17;font-weight:600;text-decoration:none}
+a.b:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+  <p class="k">Reality Architecture</p>
+  <h1>Questa pagina<br><em>non c’è.</em></h1>
+  <p>Forse il link è cambiato. Riparti dalla pagina principale.</p>
+  <a class="b" id="home" href="/">Torna alla home</a>
+</main>
+<script>if (location.hostname.indexOf('github.io') > -1) document.getElementById('home').href = '/ra-sito/';</script>
+</body>
+</html>
