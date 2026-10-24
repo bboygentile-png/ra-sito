@@ -1,7 +1,417 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Reality Architecture · PREMIUM</title>
-<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta property="og:title" content="Reality Architecture · PREMIUM"><meta property="og:description" content="Scrivimi su WhatsApp: ti racconto il percorso PREMIUM.">
-<meta property="og:type" content="website">
-<script>/* link breve della newsletter (23/10 COO): PREMIUM si vende in chat -> WhatsApp di Marco con il messaggio già scritto */location.replace('https://wa.me/393516988532?text=Ciao%20Marco%2C%20vorrei%20info%20su%20PREMIUM');</script>
-<meta http-equiv="refresh" content="0;url=https://wa.me/393516988532?text=Ciao%20Marco%2C%20vorrei%20info%20su%20PREMIUM">
-</head><body style="background:#FBF7F0"><a href="https://wa.me/393516988532?text=Ciao%20Marco%2C%20vorrei%20info%20su%20PREMIUM">Scrivimi su WhatsApp</a></body></html>
+<title>Reality Architecture PREMIUM</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+/* Lettera di vendita lunga su carta crema, una colonna stretta; il viola apre e chiude, l'oro segna solo le cose da fare. */
+:root{
+  --viola:#3B1F5C; --viola-2:#4A2A70; --oro:#C9973F; --oro-scuro:#A8762D;
+  --crema:#FBF7F0; --crema-2:#F3EADB; --inchiostro:#1D1A17; --grigio:#5D564E; --bianco:#FFFDF9;
+  --display:'Lora', Georgia, 'Times New Roman', serif;
+  --testo:'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--crema);color:var(--inchiostro);font-family:var(--testo);font-weight:300;font-size:1.06rem;line-height:1.7}
+.fascia{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.col{max-width:40rem;margin:0 auto}
+h1,h2,h3{font-family:var(--display);color:var(--viola);text-wrap:balance;line-height:1.2;margin:0}
+h2{font-size:clamp(1.55rem,4.5vw,2.05rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0}
+strong{font-weight:600}
+.flusso{display:flex;flex-direction:column;gap:1.1rem}
+.etichetta{font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-scuro)}
+
+/* apertura */
+.apertura{background:var(--viola);color:var(--crema);padding-block:3.2rem 3.6rem}
+.apertura .etichetta{color:var(--oro)}
+.apertura h1{color:var(--bianco);font-size:clamp(2rem,6.4vw,3.05rem);font-weight:600;margin-top:1rem}
+.apertura h1 em{font-style:italic;color:var(--oro)}
+.apertura .sotto{font-size:1.12rem;margin-top:1.3rem;color:#EFE6F6;max-width:34rem}
+.data{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.6rem;font-size:.92rem;color:#E4D8EE}
+.data b{color:var(--oro);font-weight:500}
+.bottone{display:inline-block;margin-top:1.8rem;background:var(--oro);color:var(--viola);font-weight:600;text-decoration:none;padding:.95rem 1.6rem;border-radius:999px;font-size:1rem;letter-spacing:.01em}
+.bottone:hover,.bottone:focus-visible{background:#D8A852;outline:none;box-shadow:0 0 0 3px var(--bianco)}
+
+.sezione{padding-block:3rem}
+.sezione + .sezione{padding-top:0}
+.ferma{font-family:var(--display);font-size:1.35rem;color:var(--viola);font-weight:600;line-height:1.4}
+.citazione{font-family:var(--display);font-style:italic;font-size:1.2rem;color:var(--viola-2);border-left:2px solid var(--oro);padding-left:1rem}
+
+/* bullet */
+.bullet{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.95rem}
+.bullet li{padding-left:1.6rem;position:relative}
+.bullet li::before{content:"";position:absolute;left:0;top:.62em;width:.6rem;height:.6rem;background:var(--oro);transform:rotate(45deg)}
+
+/* due colonne per chi è */
+.per-chi{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.per-chi > div{min-width:0;background:var(--bianco);border:1px solid var(--crema-2);border-radius:14px;padding:1.3rem 1.3rem 1.4rem}
+.per-chi h3{margin-bottom:.8rem}
+.per-chi ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.5rem}
+
+/* percorso */
+.passi{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.4rem;counter-reset:p}
+.passi li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;align-items:start}
+.passi li::before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:1.9rem;color:var(--oro);line-height:1}
+.passi li > div{min-width:0}
+.passi h3{margin-bottom:.3rem}
+
+/* cosa ricevi */
+.dentro{background:var(--bianco);border:1px solid var(--oro);border-radius:16px;padding:1.6rem}
+.voce{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding-block:1rem;border-bottom:1px solid var(--crema-2)}
+.voce:last-of-type{border-bottom:none}
+.voce > div{min-width:0}
+.voce h3{font-size:1.08rem}
+.voce .valore{font-size:.85rem;color:var(--grigio);white-space:nowrap;padding-top:.15rem}
+.voce p{grid-column:1 / -1;font-size:.98rem;color:var(--grigio)}
+
+/* testimonianze */
+.voci{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.voci figure{margin:0;background:var(--bianco);border-radius:14px;padding:1.3rem;border:1px solid var(--crema-2);display:flex;flex-direction:column;gap:.8rem;min-width:0}
+.voci blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:1.06rem;color:var(--viola-2);line-height:1.5}
+.voci figcaption{font-size:.85rem;color:var(--grigio)}
+.nota{font-size:.8rem;color:var(--grigio)}
+
+/* prezzo e iscrizione */
+.prezzo{background:var(--viola);color:var(--crema);padding-block:3.2rem}
+.prezzo h2{color:var(--bianco)}
+.cifra{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-top:1.2rem}
+.cifra .euro{font-family:var(--display);font-size:3.6rem;font-weight:700;color:var(--oro);line-height:1}
+.cifra .per{font-size:1rem;color:#E4D8EE}
+.prezzo p{color:#EFE6F6}
+.scadenza{display:inline-block;margin-top:1.2rem;border:1px solid var(--oro);color:var(--oro);border-radius:999px;padding:.4rem 1rem;font-size:.9rem;font-weight:500}
+
+.iscrizione{display:flex;flex-direction:column;gap:1.2rem}
+.passo{background:var(--bianco);border-radius:14px;padding:1.3rem;border:1px solid var(--crema-2)}
+.passo .etichetta{display:block;margin-bottom:.4rem}
+.coordinate{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1rem;margin-top:1rem;font-size:.95rem}
+.coordinate dt{color:var(--grigio)}
+.coordinate dd{margin:0;font-weight:500;min-width:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.copia{margin-left:.5rem;font:inherit;font-size:.78rem;font-weight:500;color:var(--viola);background:var(--crema-2);border:none;border-radius:999px;padding:.15rem .7rem;cursor:pointer;vertical-align:middle}
+.copia:hover,.copia:focus-visible{background:var(--oro);outline:none}
+.wa{display:inline-block;margin-top:.9rem;color:var(--viola);font-weight:600}
+.chiuso{background:var(--crema-2);border-radius:14px;padding:1.3rem;font-weight:500;color:var(--viola)}
+
+details{border-bottom:1px solid var(--crema-2);padding-block:1rem}
+summary{cursor:pointer;font-weight:500;color:var(--viola);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";color:var(--oro-scuro);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+summary::-webkit-details-marker{display:none}
+details p{margin-top:.6rem;color:var(--grigio)}
+
+.firma{font-family:var(--display);font-size:1.4rem;color:var(--viola);font-style:italic}
+footer{padding-block:2rem 3rem;font-size:.78rem;color:var(--grigio)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<style>
+.voci figure{padding:0;overflow:hidden}
+.voci .foto{position:relative;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,var(--crema-2),#E6D6EE);display:flex;align-items:flex-end;justify-content:flex-end;padding:.6rem}
+.voci .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.voci .foto span{position:relative;font-size:.7rem;color:var(--grigio);background:rgba(255,253,249,.8);border-radius:999px;padding:.15rem .6rem}
+.voci .dentro-fig{padding:1.2rem 1.3rem 1.3rem;display:flex;flex-direction:column;gap:.8rem}
+.aree{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem}
+.aree div{background:var(--bianco);border:1px solid var(--crema-2);border-radius:14px;padding:1rem 1.1rem;min-width:0}
+.aree b{display:block;font-family:var(--display);color:var(--viola);font-size:1.08rem;font-weight:600;margin-bottom:.2rem}
+.parole{display:flex;flex-direction:column;gap:.7rem}
+.parole p{font-family:var(--display);font-style:italic;color:var(--viola-2);font-size:1.12rem;padding-left:1rem;border-left:2px solid var(--oro)}
+.conto{background:var(--bianco);border:1px solid var(--crema-2);border-radius:16px;padding:1.4rem;display:flex;flex-direction:column;gap:.8rem}
+.conto .riga{display:flex;justify-content:space-between;gap:1rem;font-variant-numeric:tabular-nums}
+.conto .riga span:last-child{font-weight:600;white-space:nowrap}
+.pagamenti{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+.pagamenti .passo{display:flex;flex-direction:column;gap:.5rem}
+.paga{display:inline-block;text-align:center;background:var(--viola);color:var(--bianco);font-weight:600;text-decoration:none;padding:.8rem 1.2rem;border-radius:999px;margin-top:auto}
+.paga:hover,.paga:focus-visible{background:var(--viola-2);outline:none;box-shadow:0 0 0 3px var(--oro)}
+.scelte{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.scelte > div{border-radius:14px;padding:1.3rem;min-width:0}
+.scelte .a{background:var(--crema-2)}
+.scelte .b{background:var(--viola);color:var(--crema)}
+.scelte .b h3{color:var(--oro)}
+.scelte h3{margin-bottom:.5rem}
+.posti{display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;flex-wrap:wrap}
+.posti .pallini{display:flex;gap:.35rem}
+.posti .pallini i{width:.85rem;height:.85rem;border-radius:50%;border:1.5px solid var(--oro)}
+.posti .pallini i.pieno{background:var(--oro)}
+</style>
+
+<header class="apertura fascia">
+  <div class="col">
+    <span class="etichetta">Reality Architecture · PREMIUM</span>
+    <h1>Fai tutto quello che «si dovrebbe fare». <em>Eppure la vita continua a riportarti allo stesso punto.</em></h1>
+    <p class="sotto">Nei soldi, nel corpo, nelle relazioni. Trenta giorni nella mia cerchia ristretta, dove seguo uno a uno ogni persona, per spostare il punto a cui torni e ottenere finalmente quello che desideri.</p>
+    <div class="data"><span><b>Cerchia ristretta</b> solo 10 persone al mese</span><span><b>Seguiti</b> uno a uno, da me</span><span><b>Durata</b> 30 giorni</span></div>
+    <a class="bottone" href="#iscrizione">Voglio entrare in PREMIUM</a>
+  </div>
+</header>
+
+<main>
+<section class="sezione fascia">
+  <div class="col flusso">
+    <p>Ciao, sono Marco Gentile.</p>
+    <p>Prima di dirti cos'è PREMIUM, voglio leggerti alcune frasi. Me le hanno scritte persone come te, nel mio Test dei 5 Livelli. Parola per parola.</p>
+    <div class="parole">
+      <p>«Sto in piedi, ma non cresco.»</p>
+      <p>«Do più di quanto ricevo, quasi sempre.»</p>
+      <p>«È una corsa: quello che entra è già impegnato.»</p>
+      <p>«Ci ho pensato troppo, e l'occasione si è chiusa.»</p>
+      <p>«Faccio qualche giorno senza andare avanti nei miei progetti, e poi riparto da capo.»</p>
+      <p>«Non voglio più rimandarlo.»</p>
+    </div>
+    <p>Se almeno una di queste l'hai sentita tua, continua a leggere. Questa pagina è per te.</p>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Quanto ti sta costando</span>
+    <h2>Restare dove sei ha un prezzo. Lo paghi ogni giorno.</h2>
+    <p>Lo paghi in un lavoro che non ti soddisfa, o in cui sai benissimo che potresti guadagnare di più.</p>
+    <p>Lo paghi in un corpo che a volte non senti nemmeno tuo: la stanchezza che non passa, la forma che rimandi a lunedì, l'energia che ti manca proprio quando ti serve.</p>
+    <p>Lo paghi nelle stesse discussioni, sempre quelle. Al lavoro, a casa, perfino con gli amici. Cambiano le parole, ma il copione è identico.</p>
+    <p>E lo paghi nel progetto che hai in testa da anni e che resta lì. Mentre guardi altri, che non hanno niente più di te, prendersi la vita che vorresti.</p>
+    <p class="ferma">Il problema non è che non ti impegni. Ti impegni anche troppo. Il problema è dove ti impegni.</p>
+    <p>Su 80 persone che hanno fatto il mio Test dei 5 Livelli, più della metà aveva già speso oltre 2.000€ in corsi, libri e percorsi. Più di una su tre, oltre 5.000€.</p>
+    <p>Migliaia di euro, mesi di impegno. E la vita sempre allo stesso punto.</p>
+    <p>E il motivo è semplice: tutti quei corsi lavorano sul posto sbagliato. Ti danno strategie, tecniche, motivazione. Ma tu non torni indietro per mancanza di strategie.</p>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Il vero motivo</span>
+    <h2>Dentro di te c'è un termostato</h2>
+    <p>Funziona come quello di casa. Puoi alzare la temperatura quanto vuoi: lui la riporta sempre dove è impostato.</p>
+    <p>Guadagni di più, e arriva la spesa imprevista. Ti rimetti in forma, e dopo un mese torni alle vecchie abitudini. Una relazione migliora, e poi riparte la stessa discussione di sempre.</p>
+    <p>Non è sfortuna. È il termostato che fa il suo lavoro.</p>
+    <p>Ed è impostato su una frase che hai imparato tanti anni fa. «Noi siamo quelli che fanno fatica.» «Prima gli altri, poi io.» «Le cose belle durano poco.» Non la pensi: la vivi. E il corpo la ripete prima ancora che tu te ne accorga.</p>
+    <p class="citazione">In PREMIUM vediamo il punto esatto in cui torni indietro. E lo spostiamo, perché non succeda più.</p>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Dove si vede il cambiamento</span>
+    <h2>Quello che desideri, in ogni parte della tua vita</h2>
+    <p>Il termostato non riguarda solo i soldi. È lo stesso in ogni area. Per questo, quando si sposta, si muove tutto.</p>
+    <div class="aree">
+      <div><b>Soldi e lavoro</b>Guadagni quello che sai di valere, e i soldi che arrivano restano.</div>
+      <div><b>Corpo e salute</b>Torni a sentire il tuo corpo come casa, con l'energia per fare quello che vuoi.</div>
+      <div><b>Relazioni</b>A casa, con gli amici, in ufficio o in azienda: meno attrito, più spazio per te.</div>
+      <div><b>I tuoi progetti</b>Quello che rimandi da anni esce dal cassetto, e questa volta ci resta fuori.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Cosa scopri</span>
+    <h2>In 30 giorni, ecco cosa si apre</h2>
+    <ul class="bullet">
+      <li>Il punto preciso, nel corpo, in cui ti tiri indietro un attimo prima che le cose decollino. E come accorgertene mentre succede, non tre giorni dopo</li>
+      <li>Perché i soldi che arrivano «in più» spariscono quasi sempre entro poche settimane, e cosa cambia quando smetti di trattarli come ospiti di passaggio</li>
+      <li>«Se mi impegno di più, prima o poi arriva.» Sbagliato. È proprio questa frase a tenerti in rincorsa, e ti faccio vedere perché</li>
+      <li>Il motivo nascosto per cui la forma fisica regge qualche settimana e poi crolla, anche se sai benissimo cosa mangiare e come allenarti</li>
+      <li>La domanda di dieci secondi da farti quando senti salire l'ansia per una spesa o per una discussione. Scioglie la stretta allo stomaco e ti rimette in mano la scelta</li>
+      <li>Perché litighi sempre per le stesse cose con le stesse persone, e il piccolo spostamento interiore che fa cambiare il copione anche a loro</li>
+      <li>Il legame tra il dare sempre più di quanto ricevi e il ricominciare da capo ogni volta che inizi qualcosa di tuo</li>
+      <li>Come chiedere di più, per il tuo lavoro o per te, senza quel nodo in gola che ti fa abbassare il prezzo prima ancora che l'altro risponda</li>
+      <li>Perché chi ha lavorato tanto su di sé spesso resta bloccato più a lungo degli altri. E il pezzo che i corsi di crescita personale saltano quasi sempre</li>
+      <li>Il momento della giornata in cui il termostato si rimette a posto da solo, e cosa fare in quei cinque minuti perché resti dove lo hai portato</li>
+      <li>Come riconoscere l'occasione vera da quella che ti fa solo scappare in avanti, così smetti di lasciarle passare per paura di perdere quello che hai</li>
+      <li>Cosa succede alla tua giornata quando smetti di sentirti l'unico che tiene tutto in piedi. Di solito è la prima cosa che notano le persone accanto a te</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">La cerchia</span>
+    <h2>Sei la media delle cinque persone che frequenti</h2>
+    <p>Lo sai già: le persone che hai intorno ti tirano su o ti tengono giù. Se intorno a te tutti si lamentano, aspettano, rimandano, è difficilissimo fare diverso.</p>
+    <p>In PREMIUM entri in una cerchia ristretta di persone che hanno scelto la tua stessa cosa: smettere di tornare indietro. Non un gruppo qualsiasi. Persone con le tue stesse intenzioni, che si accorgono del tuo passo avanti e lo festeggiano con te.</p>
+    <p>Quando vedi un'altra persona sciogliere il suo blocco davanti a te, il tuo si allenta da solo. È una delle cose più potenti che succedono in questo percorso, e nessun corso registrato te la può dare.</p>
+    <p>Per questo prendo solo 10 persone al mese. Voglio seguirvi davvero, uno a uno, e conoscere il punto di ciascuno.</p>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Per chi è</span>
+    <h2>PREMIUM fa per te se ti riconosci qui</h2>
+    <div class="per-chi">
+      <div>
+        <h3>È per te se</h3>
+        <ul>
+          <li>hai già dei risultati, ma vanno a fasi: su e giù</li>
+          <li>hai fatto tanti corsi e sai bene «cosa fare»</li>
+          <li>senti che il freno è dentro, non fuori</li>
+          <li>vuoi lavorare sul tuo punto, con qualcuno che ti segue davvero</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Non è il momento giusto se</h3>
+        <ul>
+          <li>cerchi una strategia per guadagnare o un sistema di trading</li>
+          <li>stai attraversando una crisi che chiede un medico o uno psicologo</li>
+          <li>vuoi solo guardare, senza mettere mano alla tua vita</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Come funziona</span>
+    <h2>Il percorso, passo dopo passo</h2>
+    <ol class="passi">
+      <li><div><h3>Troviamo il tuo termostato</h3><p>Nel primo incontro dal vivo trovi la frase che ti tiene dove sei, con le tue parole. Da lì in poi la riconosci ogni volta che si accende.</p></div></li>
+      <li><div><h3>Lo sciogliamo mentre succede</h3><p>Negli incontri della cerchia puoi parlare, portare la tua situazione e lavorarci con me in diretta. Non è una lezione da seguire in silenzio: è il tuo punto, quel giorno.</p></div></li>
+      <li><div><h3>Lo alleni ogni giorno</h3><p>Tra un incontro e l'altro hai La Mappa, il mio corso completo, le pratiche da cinque minuti e il gruppo Telegram dove mi scrivi quando ti serve.</p></div></li>
+      <li><div><h3>Il nuovo livello diventa casa</h3><p>Dopo trenta giorni il punto a cui la vita ti riporta è più in alto. E quando arriva un imprevisto, lo attraversi senza tornare indietro.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Cosa trovi dentro</span>
+    <h2>Tutto quello che ricevi con PREMIUM</h2>
+    <div class="dentro">
+      <div class="voce"><div><h3>Il percorso di 30 giorni con me, nella cerchia ristretta</h3></div><span class="valore">il cuore</span><p>Incontri dal vivo su Zoom dove lavoriamo sul tuo punto, mentre succede. Massimo 10 persone, per seguire ognuno uno a uno.</p></div>
+      <div class="voce"><div><h3>Il gruppo Telegram con accesso diretto a me</h3></div><span class="valore">incluso</span><p>Qui mi scrivi le tue domande, i tuoi passi avanti e i momenti difficili. Ti rispondo io, direttamente.</p></div>
+      <div class="voce"><div><h3>La Mappa, il corso completo</h3></div><span class="valore">sul sito 497€</span><p>Il metodo intero, per lavorare ogni giorno tra un incontro e l'altro, al tuo ritmo.</p></div>
+      <div class="voce"><div><h3>Le registrazioni di ogni incontro</h3></div><span class="valore">incluse</span><p>Se una volta non riesci a esserci, la riguardi quando vuoi e non perdi niente.</p></div>
+      <div class="voce"><div><h3>Le pratiche quotidiane da cinque minuti</h3></div><span class="valore">incluse</span><p>Respiro a 5 livelli, Domande Quantiche, Dichiarazioni e celebrazioni serali: il tuo allenamento di ogni giorno.</p></div>
+      <div class="voce"><div><h3>Una cerchia di persone con le tue stesse intenzioni</h3></div><span class="valore">non ha prezzo</span><p>Persone che hanno scelto di smettere di tornare indietro, e che camminano con te.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Chi ha lavorato con me</span>
+    <h2>Le loro parole, non le mie</h2>
+    <div class="voci">
+      <figure><div class="foto"><img src="img/a-simona-finestra.jpg" alt="Donna di spalle alla finestra al mattino" loading="lazy"><span>immagine illustrativa</span></div><div class="dentro-fig"><blockquote>«Per la prima volta dopo anni mi sono svegliata senza stretta allo stomaco, con un senso di leggerezza. Nulla era cambiato all'esterno, ma dentro avvertivo un'insolita sensazione di certezza.»</blockquote><figcaption>Simona, dopo 35 anni di corsi</figcaption></div></figure>
+      <figure><div class="foto"><img src="img/b-giorgio-scrivania.jpg" alt="Uomo di spalle alla scrivania con due monitor" loading="lazy"><span>immagine illustrativa</span></div><div class="dentro-fig"><blockquote>«Durante le coaching fatte con te ho riguadagnato tutti i soldi persi con un investimento che si è rivelato una truffa, e parliamo di 15.000€.»</blockquote><figcaption>Giorgio, trader da quasi 9 anni<br><span class="nota">Risultato personale di Giorgio, non una promessa di guadagno.</span></figcaption></div></figure>
+      <figure><div class="foto"><img src="img/c-luca-meditazione.jpg" alt="Uomo di spalle in meditazione su un cuscino" loading="lazy"><span>immagine illustrativa</span></div><div class="dentro-fig"><blockquote>«Nel tuo corso ho trovato una semplicità davvero shockante, in senso positivo. Risultati ottimi fin da subito, quasi come un salto quantico di consapevolezza.»</blockquote><figcaption>Luca, dopo anni di altri percorsi</figcaption></div></figure>
+      <figure><div class="foto"><img src="img/d-andrea-call.jpg" alt="Uomo al portatile durante una call di gruppo" loading="lazy"><span>immagine illustrativa</span></div><div class="dentro-fig"><blockquote>«Marco mi ha fatto capire una cosa importante che avevo perso nel tempo: la mia identità.»</blockquote><figcaption>Andrea, durante una call di gruppo</figcaption></div></figure>
+      <figure><div class="dentro-fig"><blockquote>«Il mio motto, scritto su un foglio rosa con una penna viola, dice: "Nella lentezza respira e assapora la vita". Sono partita dal respiro, che ormai mi viene spontaneo anche negli esercizi fisici di ogni giorno. Sono riuscita a trasformare e finalmente rinnovare il mio modo di essere. Ora vivo l'esperienza chiamata vita con un respiro nuovo, con un gusto nuovo. Grazie Marco, grazie davvero.»</blockquote><figcaption>Silvia L., dopo Rompi il Soffitto</figcaption></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">Perché lo faccio così</span>
+    <h2>Avrei potuto scriverci un altro corso</h2>
+    <p>Ci ho pensato. Ma un corso ti dà le informazioni, e le informazioni ce le hai già. Quello che manca è qualcuno che veda il punto in cui ti fermi, nel momento in cui ti fermi.</p>
+    <p>Per questo PREMIUM è fatto così: trenta giorni, una cerchia ristretta, il corso per allenarti ogni giorno e un filo diretto con me. Abbastanza a lungo perché il cambiamento diventi abitudine. Abbastanza vicino perché nessuno resti indietro.</p>
+    <p>Su di me ho investito decine di migliaia di euro, fino alle Hawaii e a Bali. Oggi vivo di quello che insegno, e chiudo mesi che anni fa non avrei osato immaginare. Il metodo che uso su di me è lo stesso che userò con te.</p>
+  </div>
+</section>
+</main>
+
+<section class="prezzo fascia" id="prezzo">
+  <div class="col flusso">
+    <span class="etichetta" style="color:var(--oro)">L'investimento</span>
+    <h2>Facciamo due conti</h2>
+    <p>Più di una persona su tre tra quelle che leggono questa pagina ha già speso oltre 5.000€ per cambiare la propria vita, intervenendo nel posto sbagliato.</p>
+    <p>Solo La Mappa, sul sito, costa 497€. Un percorso individuale con me parte da molto di più.</p>
+    <p>In PREMIUM hai tutto: il percorso con me, la cerchia, il gruppo Telegram con accesso diretto, La Mappa e le registrazioni.</p>
+    <div class="cifra"><span class="euro">297€</span><span class="per">+ IVA (65,34€), per tutto il percorso di 30 giorni</span></div>
+    <p>Meno di 10€ al giorno. Meno di quanto ti costa, ogni giorno, restare dove sei.</p>
+    <div class="posti"><span class="scadenza">Solo 10 persone al mese</span></div>
+  </div>
+</section>
+
+<section class="sezione fascia" id="iscrizione">
+  <div class="col flusso">
+    <span class="etichetta">Come entrare</span>
+    <h2>Scegli come pagare e ci vediamo dentro</h2>
+    <p>In questi giorni questa pagina la stanno leggendo decine di persone. Io prendo solo 10 persone al mese: quando la cerchia del mese è completa, le iscrizioni si chiudono e si entra il mese dopo.</p>
+    <div class="pagamenti">
+      <div class="passo">
+        <span class="etichetta">Carta</span>
+        <h3>Paga con carta</h3>
+        <p>Pagamento sicuro, con fattura.</p>
+        <a class="paga" href="https://www.realityarchitecture.it/premium-iscrizione" id="link-carta">Paga con carta</a>
+      </div>
+      <div class="passo">
+        <span class="etichetta">PayPal</span>
+        <h3>Paga con PayPal</h3>
+        <p>Usa il tuo conto PayPal o una carta collegata.</p>
+        <a class="paga" href="https://www.realityarchitecture.it/premium-iscrizione" id="link-paypal">Paga con PayPal</a>
+      </div>
+      <div class="passo">
+        <span class="etichetta">Bonifico</span>
+        <h3>Paga con bonifico</h3>
+        <dl class="coordinate">
+          <dt>Intestatario</dt><dd>DE ABUNDANTIA S.R.L.</dd>
+          <dt>Banca</dt><dd>Cassa Padana, filiale di Goito</dd>
+          <dt>IBAN</dt><dd><span id="iban">IT60O0834057660000002165990</span><button class="copia" type="button" id="copia-iban" data-copia="IT60O0834057660000002165990">Copia</button></dd>
+          <dt>Importo</dt><dd>297€ + IVA (65,34€), totale 362,34€</dd>
+          <dt>Causale</dt><dd>Reality Architecture PREMIUM · nome e cognome</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="passo">
+      <span class="etichetta">Dopo il pagamento</span>
+      <h3>Cosa succede subito dopo</h3>
+      <p>Con carta o PayPal arrivi sulla pagina di benvenuto: lì trovi il contatto diretto per scrivermi e i primi passi. Se paghi con bonifico, manda la ricevuta a <strong>info@realityarchitecture.it</strong> e ti rispondo con lo stesso benvenuto. Ti attivo La Mappa, ti aggiungo al gruppo Telegram e ti mando l'invito al primo incontro della cerchia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col">
+    <span class="etichetta">Domande frequenti</span>
+    <h2 style="margin-block:.6rem 1rem">Prima che tu me lo chieda</h2>
+    <details id="d1"><summary>E se una volta non riesco a esserci dal vivo?</summary><p>Ogni incontro è registrato e lo riguardi quando vuoi. In più hai il gruppo Telegram: mi scrivi la tua domanda e ti rispondo io.</p></details>
+    <details id="d2"><summary>Ho già fatto tanti corsi. Cosa cambia qui?</summary><p>Un corso ti spiega cosa fare. Qui lavoriamo sul punto in cui ti fermi, con te, mentre succede. È la parte che di solito manca, ed è il motivo per cui chi ha fatto tanti corsi spesso ottiene qui i risultati più rapidi.</p></details>
+    <details id="d3"><summary>Funziona anche se il mio blocco non riguarda i soldi?</summary><p>Sì. Il termostato è lo stesso nei soldi, nel corpo e nelle relazioni. Porti l'area che ti sta più a cuore e lavoriamo lì: di solito, quando si sposta in un punto, si muove anche il resto.</p></details>
+    <details id="d4"><summary>Quanto tempo mi chiede al giorno?</summary><p>Le pratiche durano cinque minuti. Il resto lo porti nella tua giornata: ti accorgi, respiri, scegli. Più gli incontri della cerchia, che puoi anche riguardare registrati.</p></details>
+    <details id="d5"><summary>È obbligatorio parlare davanti agli altri?</summary><p>No. Puoi parlare e portare la tua situazione, ed è lì che succedono le cose più belle. Ma puoi anche ascoltare e scrivere: va bene comunque.</p></details>
+    <details id="d6"><summary>Cosa succede dopo i 30 giorni?</summary><p>Alla fine del percorso ti dico come puoi continuare, se lo senti. Nessun rinnovo automatico: paghi una volta sola.</p></details>
+    <details id="d7"><summary>Ricevo la fattura?</summary><p>Sì, fattura italiana di DE ABUNDANTIA S.R.L. Il prezzo è 297€ + IVA (65,34€), cioè 362,34€ in tutto.</p></details>
+  </div>
+</section>
+
+<section class="sezione fascia">
+  <div class="col flusso">
+    <span class="etichetta">La tua scelta</span>
+    <h2>Per come la vedo io, hai due strade</h2>
+    <div class="scelte">
+      <div class="a">
+        <h3>Resti dove sei</h3>
+        <p>Ci provi da solo, come hai sempre fatto. Continui a spendere in soluzioni che lavorano nel posto sbagliato, a fare le stesse cose. E tra 30, 90, 365 giorni sei esattamente al punto di adesso, con in più la frustrazione di non esserci riuscito che si accumula.</p>
+      </div>
+      <div class="b">
+        <h3>Entri in PREMIUM</h3>
+        <p>E finalmente vedi il punto esatto in cui torni indietro. Lo sposti, con me accanto e con una cerchia di persone che vanno nella tua stessa direzione. E inizi a ottenere quello che desideri: nei soldi, nel corpo, nelle relazioni.</p>
+      </div>
+    </div>
+    <p>Immagina tra un mese. Arriva una spesa che un tempo ti avrebbe tolto il sonno, e ti accorgi che respiri. Entra un pagamento in più, e resta. Torni a casa e la solita discussione non parte. Riprendi in mano quel progetto, e questa volta non torna nel cassetto.</p>
+    <p>La scelta è tua. Io ti aspetto dentro.</p>
+    <p class="firma">Marco</p>
+    <p><strong>P.S.</strong> Prendo solo 10 persone al mese, perché voglio seguire davvero ognuna. Quando la cerchia del mese è completa, chiudo le iscrizioni. Se senti che questa pagina parla di te, non rimandare anche questo.</p>
+    <a class="bottone" href="#iscrizione" style="align-self:flex-start">Voglio entrare in PREMIUM</a>
+  </div>
+</section>
+
+<footer class="fascia"><div class="col">Reality Architecture è un percorso di crescita personale: non sostituisce il parere di medici, psicologi o consulenti finanziari. I risultati citati sono personali e non sono una promessa. Le immagini accanto alle testimonianze sono illustrative. DE ABUNDANTIA S.R.L. · P.IVA 05127630233 · Via Belvedere 30, 37064 Povegliano Veronese (VR)</div></footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.copia').forEach(function(b){
+    b.addEventListener('click', function(){
+      var t = b.getAttribute('data-copia');
+      var fatto = function(){ b.textContent = 'Copiato'; setTimeout(function(){ b.textContent = 'Copia'; }, 1800); };
+      var seleziona = function(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('iban')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(t).then(fatto, seleziona); } catch (e) { seleziona(); }
+    });
+  });
+})();
+</script>
