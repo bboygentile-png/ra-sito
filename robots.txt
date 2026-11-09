@@ -1,3 +1,25 @@
+# Il sito (realityarchitecture.it) e il blog (www.realityarchitecture.it/blog) stanno su due indirizzi diversi:
+# la seconda sitemap qui sotto è quella che Systeme genera per www, blog compreso.
 User-agent: *
 Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://realityarchitecture.it/sitemap.xml
+Sitemap: https://www.realityarchitecture.it/sitemap.xml

@@ -271,7 +271,8 @@ em{font-style:italic}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1080px){
-  .menu{gap:18px}
+  .menu{gap:12px}
+  .menu a{white-space:nowrap}
   .scala{grid-template-columns:1fr 1fr 1fr}
   .gr:nth-child(n){margin-bottom:0}
   .gr--top{grid-column:span 3}
@@ -282,7 +283,7 @@ em{font-style:italic}
   .menu.is-open{opacity:1;visibility:visible}
   .menu a:not(.btn){font:500 1.8rem/1.2 var(--serif);color:var(--crema);padding:10px 0;opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
   .menu.is-open a:not(.btn){opacity:1;transform:none}
-  .menu.is-open a:nth-child(2){transition-delay:.04s}.menu.is-open a:nth-child(3){transition-delay:.08s}.menu.is-open a:nth-child(4){transition-delay:.12s}.menu.is-open a:nth-child(5){transition-delay:.16s}.menu.is-open a:nth-child(6){transition-delay:.2s}
+  .menu.is-open a:nth-child(2){transition-delay:.04s}.menu.is-open a:nth-child(3){transition-delay:.08s}.menu.is-open a:nth-child(4){transition-delay:.12s}.menu.is-open a:nth-child(5){transition-delay:.16s}.menu.is-open a:nth-child(6){transition-delay:.2s}.menu.is-open a:nth-child(7){transition-delay:.24s}
   .menu__cta{margin-top:22px;padding:16px 30px;font-size:1rem}
   .tri{grid-template-columns:1fr}
   .pilastri,.perchi{grid-template-columns:1fr}

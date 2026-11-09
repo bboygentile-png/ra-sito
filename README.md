@@ -23,6 +23,11 @@ quiz `…/test-allineamento` · 7 giorni (9€) `…/7-giorni-allinearti` · lib
 
 Regole del testo: voce in `mate/docs/brand.md` del repo principale; testimonianze solo da `mate/docs/testimonianze.md` (nome di battesimo, testo invariato, «Risultati personali, non garantiti» sotto soldi e salute).
 
+## Motori di ricerca e AI
+
+- `sitemap.xml` e `llms.txt`: li riscrive da solo il giro del blog (`strumenti/blog/sito_ra.py` nel repo hub) quando esce un articolo. Non modificarli a mano.
+- `robots.txt`: fisso, lascia passare i crawler AI e dichiara la sitemap di questo sito e quella di `www` (Systeme, blog compreso).
+
 ## Situazione oggi (13/10/2026)
 
 - **`realityarchitecture.it`** (dominio nudo): DNS con i 4 record A di GitHub Pages (185.199.108-111.153). Lo serve il repo **`bboygentile-png/realityarchitecture-redirect`** (file `CNAME` = `realityarchitecture.it`): `/` rimanda al quiz, ogni altro percorso a `www.realityarchitecture.it/<percorso>`.
