@@ -1,0 +1,91 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>window.MATE_EVENTO={nome:'ViewContent',valore:19,prodotto:'Stavolta Resto'}</script><title>Stavolta Resto · audio guidato di 10 minuti</title>
+<meta name="description" content="La pratica guidata di 10 minuti per il momento esatto in cui torna il vecchio schema."><meta property="og:title" content="Stavolta Resto · audio guidato di 10 minuti"><meta property="og:description" content="Per chi ha già lavorato tanto su di sé e torna sempre allo stesso punto."><meta property="og:type" content="website"><meta name="robots" content="noindex"><link rel="icon" href="/favicon-32.png"><style>body{margin:0;background:#FBF7F0}.sr{margin:0!important}</style>
+<script>
+window.raCookie=window.raCookie||function(){
+  try{localStorage.removeItem('mate_cookie')}catch(x){}
+  var h=location.hostname.replace(/^www\./,'');
+  ['_fbp','_fbc'].forEach(function(n){
+    [h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});
+    document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  });
+  location.reload();
+};
+</script>
+<script>
+(function(){
+var PIXEL_ID='1808505083359613', PRIVACY_URL='https://www.realityarchitecture.it/privacy';
+function ck(){try{return localStorage.getItem('mate_cookie')||''}catch(e){return ''}}
+function ckSet(v){try{localStorage.setItem('mate_cookie',v)}catch(e){}}
+var fatto=0;
+function px(){if(fatto||ck()!=='si')return;fatto=1;
+ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init',PIXEL_ID);fbq('track','PageView');
+ var ev=window.MATE_EVENTO;if(ev&&ev.nome){var k='mate_ev_'+ev.nome+'_'+location.pathname;var gia=0;try{gia=sessionStorage.getItem(k)}catch(e){}
+  if(!gia){fbq('track',ev.nome,ev.valore?{value:ev.valore,currency:'EUR',content_name:ev.prodotto||''}:{});try{sessionStorage.setItem(k,'1')}catch(e){}}}}
+function raCkSpazio(d){var b=document.body,s=window.__raCkS;if(s){removeEventListener('scroll',s);removeEventListener('resize',s);window.__raCkS=null}if(!b)return;if(!d){if(b.hasAttribute('data-ra-pb')){b.style.paddingBottom=b.getAttribute('data-ra-pb');b.removeAttribute('data-ra-pb')}return}if(!b.hasAttribute('data-ra-pb'))b.setAttribute('data-ra-pb',b.style.paddingBottom||'');s=function(){if(!d.isConnected)return;var o=0;[].forEach.call(document.querySelectorAll('#raBarra,.ra-barra,#mate-bar'),function(x){var r=x.getBoundingClientRect(),p=getComputedStyle(x).position;if(r.height&&(p=='fixed'||p=='sticky')&&r.top<innerHeight&&r.bottom>innerHeight-4)o=Math.max(o,innerHeight-r.top)});d.style.bottom=(12+o)+'px';b.style.paddingBottom=(d.offsetHeight+24+o)+'px'};window.__raCkS=s;addEventListener('scroll',s,{passive:true});addEventListener('resize',s);s();setTimeout(s,400)}
+function banner(){if(ck()||document.getElementById('mate-ck'))return;
+ var d=document.createElement('div');d.id='mate-ck';
+ d.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:rgba(29,26,23,.96);color:#FBF7F0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));font:13px/1.35 Poppins,system-ui,sans-serif;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center');
+ /* 19/10 (Marco via COO): barra sottile in basso invece del riquadro; i due pulsanti restano uguali per peso e colore del bordo (Garante 2021) */
+ d.innerHTML='<span style="flex:1 1 200px;min-width:0">Cookie di misurazione Meta: scegli tu. <a href="'+PRIVACY_URL+'" target="_blank" rel="noopener" style="color:#C9973F">Informativa</a></span>'+
+  '<span style="display:flex;gap:8px"><button data-ck="si" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Accetto</button><button data-ck="no" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Rifiuto</button></span>';
+ d.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-ck');if(!v)return;ckSet(v);d.remove();raCkSpazio(null);if(v==='si')px()});
+ document.body.appendChild(d);raCkSpazio(d)}
+/* «Preferenze cookie» nel footer: cancella la scelta e i cookie di Meta, poi rimostra il banner (se il pixel era già partito ricarica, così resta spento) */
+window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}
+ var h=location.hostname.replace(/^www\./,'');['_fbp','_fbc'].forEach(function(n){[h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'});
+ if(era){location.reload();return}var v=document.getElementById('mate-ck');if(v)v.remove();banner()};
+function dopo(fn){requestAnimationFrame(function(){setTimeout(fn,0)})}dopo(px);
+if(document.readyState==='complete')setTimeout(banner,300);else{window.addEventListener('load',function(){setTimeout(banner,300)});setTimeout(banner,3500)}
+})();
+</script></head><body><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"><style>
+.sr{background:#FBF7F0;color:#1D1A17;font:400 17px/1.7 Poppins,Arial,sans-serif;text-align:left;margin:0 -10px}
+.sr *{box-sizing:border-box}.sr .head{background:linear-gradient(180deg,#2A1543,#3B1F5C);color:#fff;padding:30px 20px 34px;text-align:center}
+.sr .occ{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E3B574;margin:0 0 12px}
+.sr h1{font:700 31px/1.22 Lora,Georgia,serif;margin:0 auto 14px;max-width:640px;color:#fff}
+.sr .sub{max-width:600px;margin:0 auto;color:#EDE4F5;font-size:17px}
+.sr .box{max-width:640px;margin:20px auto 0;background:#fff;border-radius:14px;padding:14px 16px;color:#2a2235;text-align:left}
+.sr .box b.t{display:block;font:600 14px Poppins;color:#3B1F5C;margin:0 0 8px}.sr audio{width:100%}
+.sr .col{max-width:640px;margin:0 auto;padding:30px 18px 8px}
+.sr p{margin:0 0 15px}.sr h2{font:700 25px/1.3 Lora,Georgia,serif;color:#3B1F5C;margin:30px 0 12px}
+.sr blockquote{margin:0 0 12px;padding:10px 14px;border-left:3px solid #C9973F;background:#fff;font-style:italic;font-size:16px}
+.sr .cta{display:block;text-align:center;background:linear-gradient(180deg,#d9b45a,#b48a33);color:#1e0f33;font-weight:600;text-decoration:none;padding:17px 18px;border-radius:14px;margin:22px 0 8px;font-size:18px}
+.sr ul.ch{list-style:none;padding:0;margin:0 0 16px}.sr ul.ch li{position:relative;padding-left:30px;margin:0 0 13px}.sr ul.ch li:before{content:"✓";position:absolute;left:0;top:2px;width:21px;height:21px;border-radius:50%;background:#3B1F5C;color:#e6c97f;font:600 12px/21px Poppins;text-align:center}
+.sr .prezzo{background:#fff;border:2px solid #C9973F;border-radius:14px;padding:16px 18px;margin:18px 0}
+.sr .prezzo b.p{font:700 30px Lora,serif;color:#3B1F5C}.sr .nota{font-size:13.5px;color:#6b6377}
+.sr .piede{font-size:12.5px;color:#7a7167;text-align:center;padding:18px;line-height:1.5}
+.sr .wa{display:block;text-align:center;background:#25D366;color:#fff;font-weight:600;text-decoration:none;padding:16px;border-radius:14px;margin:14px 0}
+@media(max-width:600px){.sr h1{font-size:26px}}</style><div class="sr"><div class="head"><div class="occ">Per chi ha già lavorato tanto su di sé e torna sempre allo stesso punto</div><h1>Il nuovo audio guidato di 10 minuti per il momento esatto in cui torna il vecchio schema</h1><p class="sub">Un modo controintuitivo per restare al tuo livello nuovo, senza un altro corso, senza ripartire da capo e senza capire, ancora una volta, perché succede.</p>
+<div class="box"><b class="t">Ascolta i primi due minuti. Metti le cuffie.</b><audio controls preload="metadata" src="https://d1yei2z3i6k35z.cloudfront.net/11076033/6af1f03703acc2.34395102_stavolta-resto-assaggio.mp3"></audio><div class="nota" style="margin-top:6px">Voce di Marco generata con AI · si ascolta da fermi, mai alla guida</div></div></div>
+<div class="col"><a class="cta" data-sr-cta href="https://www.realityarchitecture.it/stavolta-resto-ordine">Sì, voglio «Stavolta Resto» · 19 €</a>
+<p>Te lo dico come lo direi a una persona a cui voglio bene.</p>
+<p>Hai fatto tanto su di te. Hai letto, hai fatto corsi, percorsi, forse anche terapia. Sai da dove viene quella reazione: magari sapresti pure spiegarla a qualcun altro.</p>
+<p>Poi succede.</p>
+<p>Una frase detta male. Un no. Una giornata storta dopo tre settimane belle. E ti ritrovi lì. Stesso punto, stessa stretta allo stomaco, e quella voce che dice: «ecco, lo sapevo».</p>
+<p>Lo scrivono così, le persone che mi raccontano il loro punto:</p>
+<blockquote>«All'inizio funziona tutto abbastanza bene, poi inizio a procrastinare su tutto. E tutto torna come prima.»</blockquote>
+<blockquote>«Mi avvicino ma poi succede che all'improvviso tutto mi rema contro e la storia si ripete uguale.»</blockquote>
+<blockquote>«Dentro sei già cambiata, fuori reagisci come prima.»</blockquote>
+<p>Se ti ci ritrovi, tieniti stretto questo, perché a me ci sono voluti anni per capirlo.</p>
+<p><b>Quello che ti manca sono i dieci minuti dopo.</b></p>
+<p>Dentro ognuno di noi c'è una specie di termostato: una misura di sicurezza, una temperatura che conosce. Quando stai meglio di quella misura, qualcosa ti riporta alla temperatura di sempre. Lo fa per tenerti al sicuro.</p>
+<p>Quasi tutto il lavoro su di sé succede quando stai bene: la domenica al corso, la sera sul libro.</p>
+<p>Il termostato si sposta in un altro momento. Quello in cui è appena tornato il vecchio schema, hai il fiato corto e in mano non hai niente.</p>
+<p>Per quel momento ho creato <b>Stavolta Resto</b>. Premi play nel momento in cui succede. Ti fermi, senti dove lo senti, ascolti la frase che ti ripeti da anni, e fai una scelta piccola, lì, mentre è tornato. Ti guido io, passo per passo.</p>
+<h2>Dentro trovi</h2>
+<ul class="ch">
+<li><b>Quando torna il vecchio schema</b> · 10 minuti guidati. Il respiro che ti fa uscire dall'allerta, la domanda che sposta l'attenzione dal perché al dove, e la frase da dire quando la testa ti sta già riportando indietro</li>
+<li><b>I 10 minuti dopo l'imprevisto</b> · guidati. Per quando si rompe qualcosa proprio mentre stava andando bene, e ti senti ripartire da capo</li>
+<li><b>I 10 minuti dopo la lite o il rifiuto</b> · guidati. Per non mandare quel messaggio che ti riporta al copione di sempre</li>
+<li><b>Il registro delle 7 volte</b> · per vedere con i tuoi occhi cosa si muove, una riga alla volta</li>
+<li>Li ascolti dal telefono, quando ti servono, e restano tuoi</li>
+</ul>
+<div class="prezzo"><b class="p">19 €</b> <span>una volta sola, nessun abbonamento</span><p class="nota" style="margin:6px 0 0"><b>La mia garanzia di 30 giorni.</b> Se non ti serve, mi scrivi a info@realityarchitecture.it e ti restituisco i 19 €. Senza domande.</p></div>
+<a class="cta" data-sr-cta href="https://www.realityarchitecture.it/stavolta-resto-ordine">Sì, voglio «Stavolta Resto» · 19 €</a>
+<h2>Chi lavora con me su respiro e identità</h2>
+<p class="nota">Queste parole arrivano da persone che hanno lavorato con me su respiro e identità in altri percorsi: l'audio è nuovo, l'ho creato adesso.</p>
+<blockquote>«Per la prima volta dopo anni, credo, mi sono svegliata senza stretta allo stomaco, con un senso di leggerezza.»<br><span style="font-style:normal;font-weight:600;font-size:14px">Simona</span></blockquote>
+<blockquote>«Sono partita dal respiro, che ormai mi viene spontaneo […]. Ora vivo l'esperienza chiamata vita con un respiro nuovo, con un gusto nuovo.»<br><span style="font-style:normal;font-weight:600;font-size:14px">Silvia L.</span></blockquote>
+<h2>Chi sono</h2>
+<p>Sono Marco Gentile, ho scritto Lo Specchio. Lavoro sull'identità con chi ha già fatto tanto su di sé e sceglie che diventi vita: nelle relazioni, nel corpo, nel lavoro, nel modo di stare con sé.</p>
+<a class="cta" data-sr-cta href="https://www.realityarchitecture.it/stavolta-resto-ordine">Sì, voglio «Stavolta Resto» · 19 €</a></div><div class="piede">Voce di Marco generata con AI. La pratica si ascolta da fermi, mai alla guida. Non sostituisce un medico o uno psicologo e non è una cura.<br>© De Abundantia S.R.L. · P.IVA 05127630233 · <a href="https://www.realityarchitecture.it/privacy" style="color:inherit">Privacy</a> · <a href="https://www.realityarchitecture.it/condizioni-vendita" style="color:inherit">Condizioni di vendita</a></div></div><script>(function(){try{var q=location.search;if(!q)return;document.querySelectorAll('a[data-sr-cta]').forEach(function(a){a.href=a.getAttribute('href').split('?')[0]+q})}catch(e){}})()</script><script>(function(){try{document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-sr-cta]');if(!a||!window.fbq)return;var K='ra_ic_sr',g=null;try{g=sessionStorage.getItem(K)}catch(x){}if(g)return;var id='InitiateCheckout.'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);try{sessionStorage.setItem(K,id)}catch(x){}try{fbq('track','InitiateCheckout',{value:19,currency:'EUR',content_name:'Stavolta Resto',content_ids:['stavolta-resto'],content_type:'product',num_items:1},{eventID:id})}catch(x){}},true)}catch(x){}})();</script></body></html>
