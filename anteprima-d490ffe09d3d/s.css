@@ -443,6 +443,8 @@ body{padding-bottom:84px}
 .sr-prezzo{background:#fff;border:3px solid #EE8B2C;border-radius:6px;padding:14px 16px;margin:18px 0;text-align:center}.sr-prezzo b{font:900 38px/1 Montserrat,Poppins,Arial,sans-serif;color:#B5233F}.sr-prezzo small{display:block;font:500 13px/1.45 Poppins,Arial,sans-serif;color:#5F5868;margin-top:6px}
 .sr-offer-vis{margin:12px auto 8px;max-width:300px}
 @media(min-width:640px){.ra-sl .sr-col h1{font-size:38px}}
+.ra-sl .ra-mock .ra-m-disco{right:2px;bottom:0}
+.ra-sl .sr-bon{list-style:none;margin:0 0 12px;padding:0}.ra-sl .sr-bon li{padding:9px 0;border-top:1px solid #E6DEEE;font:400 13.5px/1.45 Poppins,Arial,sans-serif;color:#211B27}.ra-sl .sr-bon b{display:block;font:800 12px/1.3 Montserrat,Poppins,Arial,sans-serif;text-transform:uppercase;color:#3B1F5C}.ra-sl .sr-bon em{font-style:normal;color:#A8762D;font-weight:700}
 /* area riservata */
 .sra{background:#F6F3EE;min-height:100vh;font:400 16.5px/1.6 Poppins,Arial,sans-serif;color:#2a2235}
 .sra-top{background:#2A1543;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px;font:700 14px/1.2 Montserrat,Poppins,Arial,sans-serif}
