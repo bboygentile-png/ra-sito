@@ -435,5 +435,44 @@
 </footer>
 
 <script src="main.js" defer></script>
+<!-- MATE · pixel + banner cookie per le pagine Systeme senza quiz (checkout, OTO, grazie). Va nel "codice header" della pagina.
+     Stessa scelta del quiz: localStorage 'mate_cookie' (si/no), valida su tutte le pagine dello stesso dominio.
+     Evento della pagina: window.MATE_EVENTO = {nome:'Purchase', valore:9} impostato PRIMA di questo blocco (solo nelle pagine di grazie). -->
+<script>
+(function(){
+var PIXEL_ID='1808505083359613', PRIVACY_URL='https://www.realityarchitecture.it/privacy';
+function ck(){try{return localStorage.getItem('mate_cookie')||''}catch(e){return ''}}
+function ckSet(v){try{localStorage.setItem('mate_cookie',v)}catch(e){}}
+var fatto=0;
+function px(){if(fatto||ck()!=='si')return;fatto=1;
+ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init',PIXEL_ID);fbq('track','PageView');
+ var ev=window.MATE_EVENTO;if(ev&&ev.nome){var k='mate_ev_'+ev.nome+'_'+location.pathname;var gia=0;try{gia=sessionStorage.getItem(k)}catch(e){}
+  if(!gia){fbq('track',ev.nome,ev.valore?{value:ev.valore,currency:'EUR',content_name:ev.prodotto||''}:{});try{sessionStorage.setItem(k,'1')}catch(e){}}}}
+function raCkSpazio(d){var b=document.body,s=window.__raCkS;if(s){removeEventListener('scroll',s);removeEventListener('resize',s);window.__raCkS=null}if(!b)return;if(!d){if(b.hasAttribute('data-ra-pb')){b.style.paddingBottom=b.getAttribute('data-ra-pb');b.removeAttribute('data-ra-pb')}return}if(!b.hasAttribute('data-ra-pb'))b.setAttribute('data-ra-pb',b.style.paddingBottom||'');s=function(){if(!d.isConnected)return;var o=0;[].forEach.call(document.querySelectorAll('#raBarra,.ra-barra,#mate-bar'),function(x){var r=x.getBoundingClientRect(),p=getComputedStyle(x).position;if(r.height&&(p=='fixed'||p=='sticky')&&r.top<innerHeight&&r.bottom>innerHeight-4)o=Math.max(o,innerHeight-r.top)});d.style.bottom=(12+o)+'px';b.style.paddingBottom=(d.offsetHeight+24+o)+'px'};window.__raCkS=s;addEventListener('scroll',s,{passive:true});addEventListener('resize',s);s();setTimeout(s,400)}
+function banner(){if(ck()||document.getElementById('mate-ck'))return;
+ var d=document.createElement('div');d.id='mate-ck';
+ d.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:rgba(29,26,23,.96);color:#FBF7F0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));font:13px/1.35 Poppins,system-ui,sans-serif;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center');
+ /* 19/10 (Marco via COO): barra sottile in basso invece del riquadro; i due pulsanti restano uguali per peso e colore del bordo (Garante 2021) */
+ d.innerHTML='<span style="flex:1 1 200px;min-width:0">Cookie di misurazione Meta: scegli tu. <a href="'+PRIVACY_URL+'" target="_blank" rel="noopener" style="color:#C9973F">Informativa</a></span>'+
+  '<span style="display:flex;gap:8px"><button data-ck="si" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Accetto</button><button data-ck="no" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Rifiuto</button></span>';
+ d.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-ck');if(!v)return;ckSet(v);d.remove();raCkSpazio(null);if(v==='si')px()});
+ document.body.appendChild(d);raCkSpazio(d)}
+/* «Preferenze cookie» nel footer: cancella la scelta e i cookie di Meta, poi rimostra il banner (se il pixel era già partito ricarica, così resta spento) */
+window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}
+ var h=location.hostname.replace(/^www\./,'');['_fbp','_fbc'].forEach(function(n){[h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'});
+ if(era){location.reload();return}var v=document.getElementById('mate-ck');if(v)v.remove();banner()};
+px();
+if(document.body)banner();else document.addEventListener('DOMContentLoaded',banner);
+window.addEventListener('load',function(){setTimeout(banner,1200)});
+})();
+</script>
+<!-- Correzioni mobile (15/10/2026, scripts/mobile-fix.mjs): testo del corpo ≥15px, link «CLICCA QUI» toccabili, tabella cookie senza scorrimento -->
+<style id="ra-mobile">@media (max-width:600px){
+.ra-lettera,.ra-premessa p,.ra-voce > div > p,.ra-bcard p,.ra-dg-fine,.ra-ordine-pic,.ra-ordine-sito,.ra-ordine-cosa,.ra-sotto2,.ra7-nota,.ra7-avvertenza,.ra-nota,.ra-sotto-btn,#mate p.small,#mate p.small a,#ord p.small,#ord .g,#ordbon2,#ra .q p.h,.ra-leg table{font-size:15px!important}
+.ra-cta-link{padding:14px 0!important;margin:0 0 2px!important}.ra-pill{font-size:13px!important}
+.ra-leg table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}.ra-leg td:first-child{overflow-wrap:anywhere}
+}</style>
+
 </body>
 </html>
