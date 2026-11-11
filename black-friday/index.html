@@ -2,60 +2,93 @@
 <title>Lo Specchio · Black Friday</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon-32.png"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Lora:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600&family=Lora:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap">
 <style>
-:root{--viola:#3B1F5C;--oro:#C9973F;--oro-s:#A8762D;--crema:#FBF7F0;--ink:#1D1A17;--grigio:#5D564E;--bianco:#FFFDF9;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;background:var(--crema);color:var(--ink);font:300 1.06rem/1.7 Poppins,Arial,sans-serif}
+:root{--nero:#0B0710;--nero2:#160E20;--viola:#3B1F5C;--oro:#E2B357;--oro2:#C9973F;--crema:#FBF4E6;--bianco:#FFFDF9;color-scheme:dark}
+*{box-sizing:border-box}html,body{overflow-x:hidden}
+body{margin:0;background:var(--nero);color:#EDE6F2;font:300 1.05rem/1.7 Poppins,Arial,sans-serif}
 .f{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.c{max-width:40rem;margin:0 auto}h1,h2{font-family:Lora,Georgia,serif;color:var(--viola);text-wrap:balance;line-height:1.2;margin:0}
-.top{background:var(--viola);color:#EFE6F6;padding-block:2.4rem 2.6rem}.top h1{color:var(--bianco);font-size:clamp(1.9rem,6vw,2.6rem);margin-top:.7rem}
-.et{font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
-.pacco{display:flex;justify-content:center;align-items:flex-end;height:230px;margin:1.6rem 0 .4rem}
-.lib{width:132px;height:188px;border-radius:3px 7px 7px 3px;position:relative;box-shadow:16px 18px 30px -12px rgba(0,0,0,.55);transform:rotate(-4deg);z-index:2;background:radial-gradient(ellipse at 50% 38%,#4d2a75 0%,#3B1F5C 55%,#2A1543 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:1px solid rgba(201,151,63,.4)}
-.ov{width:56px;height:76px;border:2px solid #C9973F;border-radius:50%;display:flex;align-items:center;justify-content:center;font:500 16px "Cormorant Garamond",serif;color:#f3e3c3}
-.lib small{font:500 6.5px Poppins;letter-spacing:.3em;color:#C9973F;text-transform:uppercase}
-.play{width:124px;height:176px;border-radius:3px 7px 7px 3px;transform:rotate(5deg) translateX(-22px);box-shadow:14px 16px 26px -12px rgba(0,0,0,.5);background:linear-gradient(160deg,#fffaf0,#efe1c4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:12px}
-.play b{font:600 14px Lora,serif;color:#3B1F5C}.play span{font:600 7.5px Poppins;letter-spacing:.2em;color:#A8762D;text-transform:uppercase}
-.nota{text-align:center;font-size:.75rem;color:#CBBFD8}
-.s{padding-block:2.2rem}.fl{display:flex;flex-direction:column;gap:1rem}
-.tab{width:100%;border-collapse:collapse;background:var(--bianco);border-radius:14px;overflow:hidden;border:1px solid #E8DFD0}
-.tab td{padding:.8rem 1rem;border-bottom:1px solid #EFE6D8;vertical-align:top}.tab td:last-child{text-align:right;white-space:nowrap;font-weight:500}
-.tab tr.tot td{font-weight:600;color:var(--viola);background:#F3EADB}.tab tr.bf td{font-weight:700;color:var(--viola);font-size:1.15rem;border-bottom:0}
-.btn{display:inline-block;background:var(--oro);color:var(--viola);font-weight:600;text-decoration:none;padding:1rem 1.8rem;border-radius:999px;font-size:1.05rem;text-align:center}
-.cta{display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}.pic{font-size:.86rem;color:var(--grigio)}
-ul.p{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.8rem}ul.p li{position:relative;padding-left:1.9rem}ul.p li:before{content:"";position:absolute;left:0;top:.5rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--oro)}
-.cit{font-family:Lora,serif;font-style:italic;color:var(--viola);border-left:3px solid var(--oro);padding-left:1rem}
-footer{padding-block:2rem 3rem;font-size:.78rem;color:var(--grigio)}footer a{color:var(--grigio)}
+.c{max-width:44rem;margin:0 auto}
+/* HERO */
+.hero{position:relative;padding-block:1.6rem 0;background:radial-gradient(120% 70% at 50% 0%,#3a1d5c 0%,#1a0f27 45%,var(--nero) 75%);overflow:visible}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(226,179,87,.05) 0 2px,transparent 2px 22px);pointer-events:none}
+.bf{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:.86;letter-spacing:.01em;font-size:clamp(4.2rem,21vw,9rem);margin:0;text-align:center;color:transparent;background:linear-gradient(180deg,#FFF3C9 0%,#E2B357 45%,#9C6A1E 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 6px 0 #2a1440) drop-shadow(0 18px 30px rgba(226,179,87,.35))}
+.sotto{text-align:center;font:600 .78rem Poppins;letter-spacing:.32em;text-transform:uppercase;color:var(--oro);margin:.2rem 0 0}
+.h2{text-align:center;font-family:Lora,Georgia,serif;color:var(--bianco);font-size:clamp(1.35rem,4.6vw,1.9rem);line-height:1.25;margin:1rem auto 0;max-width:30rem;text-wrap:balance}
+/* SCENA 3D */
+.scena{position:relative;height:clamp(330px,88vw,470px);margin:1rem auto -5.5rem;max-width:34rem;perspective:1100px;z-index:3}
+.luce{position:absolute;left:50%;top:55%;width:120%;height:60%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(226,179,87,.45),transparent);filter:blur(10px)}
+.libro{position:absolute;left:50%;top:6%;width:44%;aspect-ratio:7/10;transform-style:preserve-3d;transform:translateX(-62%) rotateY(-28deg) rotateX(8deg) rotateZ(-3deg);animation:galleggia 6s ease-in-out infinite}
+.libro .fronte{position:absolute;inset:0;border-radius:3px 8px 8px 3px;background:radial-gradient(ellipse at 50% 35%,#5a3289 0%,#3B1F5C 55%,#21102f 100%);border:1px solid rgba(226,179,87,.55);box-shadow:inset 0 0 0 6px rgba(226,179,87,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8%;transform:translateZ(14px)}
+.libro .fronte:before{content:"";position:absolute;inset:7%;border:1px solid rgba(226,179,87,.6)}
+.ov{width:44%;aspect-ratio:3/4;border:2px solid var(--oro);border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 clamp(.85rem,3.4vw,1.2rem) "Cormorant Garamond",serif;color:#f6e6c2}
+.libro small{font:600 clamp(.36rem,1.5vw,.5rem) Poppins;letter-spacing:.3em;color:var(--oro);text-transform:uppercase}
+.libro .dorso{position:absolute;left:0;top:0;width:28px;height:100%;background:linear-gradient(90deg,#1b0c29,#3B1F5C);transform:rotateY(-90deg) translateZ(14px) translateX(-14px);transform-origin:left}
+.libro .pagine{position:absolute;right:0;top:2%;width:26px;height:96%;background:repeating-linear-gradient(0deg,#f4ead6 0 2px,#d9cbb0 2px 3px);transform:rotateY(90deg) translateZ(-12px) translateX(13px);transform-origin:right}
+.ombra{position:absolute;left:50%;bottom:4%;width:70%;height:12%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,0,0,.75),transparent);filter:blur(6px)}
+.play{position:absolute;left:50%;top:16%;width:38%;aspect-ratio:7/10;border-radius:3px 8px 8px 3px;transform:translateX(18%) rotateY(-18deg) rotateZ(6deg);background:linear-gradient(160deg,#fffaf0,#e9d7b4);box-shadow:24px 30px 40px -18px rgba(0,0,0,.8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6%;text-align:center;padding:8%;animation:galleggia 6s ease-in-out -2s infinite}
+.play b{font:700 clamp(.8rem,3.2vw,1.1rem) Lora,serif;color:var(--viola)}.play span{font:600 clamp(.36rem,1.4vw,.5rem) Poppins;letter-spacing:.2em;color:#A8762D;text-transform:uppercase}
+.tel{position:absolute;left:7%;top:42%;width:20%;aspect-ratio:9/18;border-radius:16px;background:#0d0912;border:3px solid #2b2236;box-shadow:0 30px 40px -16px rgba(0,0,0,.9);transform:rotateZ(-12deg);overflow:hidden;animation:galleggia 6s ease-in-out -4s infinite}
+.tel:after{content:"";position:absolute;inset:8% 8%;border-radius:8px;background:radial-gradient(ellipse at 50% 35%,#5a3289,#3B1F5C 60%,#21102f);box-shadow:inset 0 0 0 2px rgba(226,179,87,.4)}
+.cuffie{position:absolute;right:4%;top:58%;width:24%;transform:rotateZ(14deg);filter:drop-shadow(0 20px 18px rgba(0,0,0,.8));animation:galleggia 6s ease-in-out -1s infinite}
+.bollo{position:absolute;right:2%;top:2%;width:clamp(96px,26vw,132px);aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,#FFE7A3,#E2B357,#B07A26,#E2B357,#FFE7A3);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2a1440;box-shadow:0 14px 30px -8px rgba(0,0,0,.8),inset 0 0 0 5px rgba(255,255,255,.25);transform:rotate(12deg);z-index:5;animation:batti 2.6s ease-in-out infinite}
+.bollo b{font:400 clamp(2rem,9vw,2.9rem)/1 Anton,Impact,sans-serif}.bollo span{font:700 .62rem Poppins;letter-spacing:.14em;text-transform:uppercase}
+@keyframes galleggia{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes batti{0%,100%{transform:rotate(12deg) scale(1)}50%{transform:rotate(12deg) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.libro,.play,.tel,.cuffie,.bollo{animation:none}}
+/* CORPO */
+.carta{position:relative;z-index:2;background:var(--crema);color:#211a2a;border-radius:28px 28px 0 0;padding-top:6.8rem}
+.carta h2{font-family:Lora,Georgia,serif;color:var(--viola);font-size:clamp(1.45rem,4.6vw,1.95rem);line-height:1.2;margin:0;text-wrap:balance}
+.fl{display:flex;flex-direction:column;gap:1rem}
+.prezzo{display:flex;align-items:baseline;justify-content:center;gap:.9rem;flex-wrap:wrap}
+.prezzo .vecchio{font:600 1.15rem Poppins;color:#7b6f86;text-decoration:line-through;text-decoration-thickness:2px}
+.prezzo .nuovo{font:400 clamp(3.4rem,15vw,4.6rem)/1 Anton,Impact,sans-serif;color:var(--viola)}
+.prezzo .nota{flex-basis:100%;text-align:center;font-size:.86rem;color:#6b6377;margin-top:-.3rem}
+.griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.9rem}
+.pezzo{background:var(--bianco);border:1px solid #E8DFD0;border-radius:16px;padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start;min-width:0;box-shadow:0 10px 24px -18px rgba(59,31,92,.5)}
+.pezzo .ic{flex:0 0 2.6rem;height:2.6rem;border-radius:12px;background:var(--viola);color:var(--oro);display:flex;align-items:center;justify-content:center;font:700 1.1rem Lora}
+.pezzo b{display:block;color:var(--viola);font-weight:600}.pezzo span{font-size:.92rem;color:#4b4256}.pezzo em{display:block;font-style:normal;font-size:.8rem;color:#A8762D;font-weight:600;margin-top:.2rem}
+.btn{display:block;width:100%;max-width:26rem;margin:0 auto;background:linear-gradient(180deg,#F1C66B,#C9973F);color:#2a1440;font:700 1.15rem Poppins;text-decoration:none;padding:1.05rem 1.4rem;border-radius:999px;text-align:center;box-shadow:0 14px 30px -12px rgba(201,151,63,.9),inset 0 -3px 0 rgba(0,0,0,.15)}
+.btn small{display:block;font:500 .78rem Poppins;opacity:.85}
+.pic{font-size:.86rem;color:#6b6377;text-align:center}
+.dolore{background:var(--nero2);color:#EDE6F2;border-radius:20px;padding:1.4rem 1.3rem}
+.dolore p{margin:0}.dolore .big{font-family:Lora,serif;font-size:1.3rem;color:var(--bianco);margin-bottom:.6rem}
+.cit{font-family:Lora,serif;font-style:italic;color:var(--viola);border-left:3px solid var(--oro2);padding-left:1rem;margin:0}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(11,7,16,.94);backdrop-filter:blur(6px);padding:.6rem max(16px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;gap:.8rem;border-top:1px solid rgba(226,179,87,.35)}
+.barra .p{font:400 1.6rem/1 Anton,Impact,sans-serif;color:var(--oro)}.barra .p small{display:block;font:500 .66rem Poppins;color:#bfb3cc;letter-spacing:.06em}
+.barra a{background:linear-gradient(180deg,#F1C66B,#C9973F);color:#2a1440;font:700 .95rem Poppins;text-decoration:none;padding:.75rem 1.2rem;border-radius:999px;white-space:nowrap}
+footer{background:var(--crema);color:#6b6377;font-size:.76rem;padding-block:1rem 6rem}footer a{color:#6b6377}
+p{margin:0}
 </style></head><body>
-<header class="top f"><div class="c">
-<div class="et">Black Friday · Lo Specchio</div>
-<h1>Tutto Lo Specchio, in ogni forma: da leggere, da ascoltare, da tenere sul comodino.</h1>
-<div class="pacco" role="img" aria-label="Il libro Lo Specchio a colori e il Playbook dei 30 giorni"><div class="lib"><small>Soldi · Corpo · Relazioni</small><div class="ov">Specchio</div><small>Marco Gentile</small></div><div class="play"><span>Il Playbook</span><b>dei 30 giorni</b><span>Attività e giochi</span></div></div>
-<p class="nota">Immagine illustrativa del pacco</p>
+<header class="hero f"><div class="c">
+<p class="sotto">Reality Architecture · Marco Gentile</p>
+<h1 class="bf">Black<br>Friday</h1>
+<p class="h2">Lo Specchio in ogni forma: da leggere, da ascoltare, da tenere sul comodino.</p>
+<div class="scena" role="img" aria-label="Il libro Lo Specchio, il Playbook dei 30 giorni, il libro digitale sul telefono e l'audiolibro">
+<div class="luce"></div><div class="ombra"></div>
+<div class="tel"></div>
+<div class="play"><span>Il Playbook</span><b>dei 30 giorni</b><span>Attività e giochi</span></div>
+<div class="libro"><div class="dorso"></div><div class="pagine"></div><div class="fronte"><small>Soldi · Corpo · Relazioni</small><div class="ov">Specchio</div><small>Marco Gentile</small></div></div>
+<svg class="cuffie" viewBox="0 0 120 110" aria-hidden="true"><path d="M14 70 C14 30 36 12 60 12 C84 12 106 30 106 70" fill="none" stroke="#E2B357" stroke-width="9" stroke-linecap="round"/><rect x="4" y="62" width="26" height="40" rx="10" fill="#3B1F5C" stroke="#E2B357" stroke-width="4"/><rect x="90" y="62" width="26" height="40" rx="10" fill="#3B1F5C" stroke="#E2B357" stroke-width="4"/></svg>
+<div class="bollo"><span>tutto a</span><b>49 €</b><span>invece di 111</span></div>
+</div>
 </div></header>
-<section class="s f"><div class="c fl">
-<p>Guadagni, e non resta niente. Ci arrivi vicino, e poi qualcosa si rompe. Ti senti bene per qualche settimana, e poi torna tutto come prima.</p>
-<p>Lo Specchio parte da lì: dal punto preciso che ti riporta indietro, e da come smettere di tornarci. Ho scritto il libro come parlerei a una persona seduta con me al tavolo della cucina.</p>
+<main class="carta f"><div class="c fl">
+<div class="prezzo"><span class="vecchio">111 €</span><span class="nuovo">49 €</span><span class="nota">111 € è il totale dei pezzi presi uno per uno sul sito, ai prezzi di oggi. Spedizione inclusa in Italia.</span></div>
+<a class="btn" href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio a 49 €<small>Digitale e audio subito · i libri stampati a casa tua</small></a>
+<div class="dolore"><p class="big">Guadagni, e non resta niente.</p><p>Ci arrivi vicino, e poi qualcosa si rompe. Stai bene per qualche settimana, e poi torna tutto come prima. Lo Specchio parte da lì: dal punto preciso che ti riporta indietro, e da come smettere di tornarci.</p></div>
+<h2>Quattro pezzi, un pacco solo</h2>
+<div class="griglia">
+<div class="pezzo"><div class="ic">1</div><div><b>Lo Specchio digitale + bonus</b><span>Subito nella tua area riservata. Lo leggi dal telefono anche stasera.</span><em>27 € sul sito</em></div></div>
+<div class="pezzo"><div class="ic">2</div><div><b>L’audiolibro con la mia voce</b><span>In macchina, a passeggio, la sera a occhi chiusi.</span><em>27 € sul sito</em></div></div>
+<div class="pezzo"><div class="ic">3</div><div><b>Lo Specchio stampato a colori</b><span>176 pagine da sottolineare e tenere sul comodino.</span><em>57 € sul sito</em></div></div>
+<div class="pezzo"><div class="ic">4</div><div><b>Il Playbook dei 30 giorni</b><span>Stampato a colori, 68 pagine: un’attività e un gioco al giorno, con lo spazio per scrivere.</span><em>solo dentro il pacco</em></div></div>
+</div>
 <p class="cit">«mi sembrava un po' di avere un caro vecchio amico al mio fianco» · Vittoria R.</p>
-<h2 style="font-size:1.5rem;margin-top:.6rem">Cosa arriva</h2>
-<ul class="p">
-<li><b>Lo Specchio digitale, con i bonus</b>: subito nella tua area riservata, lo leggi dal telefono anche stasera.</li>
-<li><b>L’audiolibro con la mia voce</b>: in macchina, a passeggio, la sera con gli occhi chiusi.</li>
-<li><b>Lo Specchio stampato a colori</b>, 176 pagine: da sottolineare e tenere sul comodino.</li>
-<li><b>Il Playbook dei 30 giorni stampato a colori</b>, 68 pagine: un’attività e un gioco al giorno, con lo spazio per scrivere. Trenta giorni per passare dal leggere al vivere.</li>
-</ul>
-<div style="overflow-x:auto"><table class="tab">
-<tr><td>Lo Specchio digitale con i bonus</td><td>27 €</td></tr>
-<tr><td>Audiolibro</td><td>27 €</td></tr>
-<tr><td>Lo Specchio stampato a colori, spedizione inclusa</td><td>57 €</td></tr>
-<tr><td>Playbook dei 30 giorni stampato a colori</td><td>incluso</td></tr>
-<tr class="tot"><td>Presi uno per uno sul sito</td><td>111 €</td></tr>
-<tr class="bf"><td>Black Friday, tutto insieme</td><td>49 €</td></tr>
-</table></div>
-<p class="pic">Prezzi dei singoli pezzi come sono sul sito oggi. Il Playbook stampato non si vende da solo: arriva solo nel pacco.</p>
-<div class="cta"><a class="btn" href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio a 49 €</a><span class="pic">Pagamento unico, spedizione inclusa in Italia. Digitale e audio subito, i libri stampati arrivano a casa in 3-4 settimane.</span></div>
-<p class="pic" style="text-align:center">Spediamo solo in Italia. Vivi all’estero? Scrivici prima di ordinare: info@realityarchitecture.it</p>
-</div></section>
+<a class="btn" href="https://www.realityarchitecture.it/black-friday-ordine">Prendo tutto a 49 €<small>Pagamento unico · spedizione inclusa in Italia</small></a>
+<p class="pic">I libri stampati arrivano in 3-4 settimane. Vuoi averli prima? Nel modulo d’ordine c’è la spedizione UPS tracciata (+30 €). Spediamo solo in Italia: vivi all’estero? Scrivici prima, info@realityarchitecture.it</p>
+</div></main>
+<div class="barra"><div class="p">49 €<small>invece di 111 € · spedizione inclusa</small></div><a href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio</a></div>
 <footer class="f"><div class="c">I risultati citati sono personali e non sono una promessa. DE ABUNDANTIA S.R.L. · P.IVA 05127630233 · Via Belvedere 30, 37064 Povegliano Veronese (VR) · <a href="https://www.realityarchitecture.it/privacy">Privacy</a> · <a href="https://www.realityarchitecture.it/condizioni-vendita">Condizioni di vendita</a></div></footer>
 <!-- MATE · pixel + banner cookie per le pagine Systeme senza quiz (checkout, OTO, grazie). Va nel "codice header" della pagina.
      Stessa scelta del quiz: localStorage 'mate_cookie' (si/no), valida su tutte le pagine dello stesso dominio.
