@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600&family=Lora:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap">
 <style>
 :root{--nero:#0B0710;--nero2:#160E20;--viola:#3B1F5C;--oro:#E2B357;--oro2:#C9973F;--crema:#FBF4E6;--bianco:#FFFDF9;color-scheme:dark}
-*{box-sizing:border-box}html,body{overflow-x:hidden}
+*{box-sizing:border-box}html,body{overflow-x:clip}
 body{margin:0;background:var(--nero);color:#EDE6F2;font:300 1.05rem/1.7 Poppins,Arial,sans-serif}
 .f{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .c{max-width:44rem;margin:0 auto}
@@ -58,12 +58,31 @@ body{margin:0;background:var(--nero);color:#EDE6F2;font:300 1.05rem/1.7 Poppins,
 .barra .p{font:400 1.6rem/1 Anton,Impact,sans-serif;color:var(--oro)}.barra .p small{display:block;font:500 .66rem Poppins;color:#bfb3cc;letter-spacing:.06em}
 .barra a{background:linear-gradient(180deg,#F1C66B,#C9973F);color:#2a1440;font:700 .95rem Poppins;text-decoration:none;padding:.75rem 1.2rem;border-radius:999px;white-space:nowrap}
 footer{background:var(--crema);color:#6b6377;font-size:.76rem;padding-block:1rem 6rem}footer a{color:#6b6377}
+
+.sez{display:flex;flex-direction:column;gap:1rem;padding-block:1.4rem}
+.sez h2{margin-bottom:.2rem}.sez p strong{color:var(--viola)}
+.bul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.95rem}
+.bul li{position:relative;padding-left:2rem}.bul li:before{content:"";position:absolute;left:0;top:.42rem;width:1.05rem;height:1.05rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,#F6D58A,#C9973F);box-shadow:0 2px 6px rgba(201,151,63,.5)}
+.bul li b{color:var(--viola)}
+.tempo{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.8rem}
+.tempo div{background:var(--bianco);border:1px solid #E8DFD0;border-radius:14px;padding:.9rem 1rem;min-width:0}.tempo b{display:block;font:400 1.3rem Anton,Impact,sans-serif;color:var(--oro2);letter-spacing:.02em}
+.test{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.9rem}
+.test figure{margin:0;background:var(--bianco);border-left:4px solid var(--oro2);border-radius:12px;padding:1rem 1.1rem;min-width:0;box-shadow:0 10px 24px -20px rgba(59,31,92,.6)}
+.test blockquote{margin:0;font-family:Lora,serif;font-style:italic;color:#2a1f36}.test figcaption{margin-top:.5rem;font-size:.84rem;color:#A8762D;font-weight:600}
+.stack{width:100%;border-collapse:collapse;background:var(--bianco);border-radius:16px;overflow:hidden;border:1px solid #E8DFD0}
+.stack td{padding:.75rem 1rem;border-bottom:1px solid #EFE6D8;vertical-align:top}.stack td:last-child{text-align:right;white-space:nowrap;font-weight:600}
+.stack .tot td{background:#F3EADB;color:var(--viola)}.stack .tot td:last-child{text-decoration:line-through;color:#7b6f86}
+.stack .bf td{background:var(--viola);color:#fff;font-size:1.15rem}.stack .bf td:last-child{font:400 1.8rem Anton,Impact,sans-serif;color:var(--oro)}
+.scad{background:var(--nero2);color:#EDE6F2;border-radius:18px;padding:1.2rem;text-align:center}.scad b{color:var(--oro)}
+details{background:var(--bianco);border:1px solid #E8DFD0;border-radius:12px;padding:.8rem 1rem}summary{cursor:pointer;font-weight:600;color:var(--viola)}details p{margin-top:.5rem}
+.ps{font-family:Lora,serif;color:#2a1f36}.ps b{color:var(--viola)}
+.chiuso{display:none}body.finito .chiuso{display:block}body.finito .aperto{display:none!important}
 p{margin:0}
 </style></head><body>
 <header class="hero f"><div class="c">
 <p class="sotto">Reality Architecture · Marco Gentile</p>
 <h1 class="bf">Black<br>Friday</h1>
-<p class="h2">Lo Specchio in ogni forma: da leggere, da ascoltare, da tenere sul comodino.</p>
+<p class="h2">Per chi fa tutto giusto e torna sempre allo stesso punto: tutto Lo Specchio, da leggere, da ascoltare e da tenere sul comodino.</p>
 <div class="scena" role="img" aria-label="Il libro Lo Specchio, il Playbook dei 30 giorni, il libro digitale sul telefono e l'audiolibro">
 <div class="luce"></div><div class="ombra"></div>
 <div class="tel"></div>
@@ -74,22 +93,92 @@ p{margin:0}
 </div>
 </div></header>
 <main class="carta f"><div class="c fl">
-<div class="prezzo"><span class="vecchio">111 €</span><span class="nuovo">49 €</span><span class="nota">111 € è il totale dei pezzi presi uno per uno sul sito, ai prezzi di oggi. Spedizione inclusa in Italia.</span></div>
-<a class="btn" href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio a 49 €<small>Digitale e audio subito · i libri stampati a casa tua</small></a>
-<div class="dolore"><p class="big">Guadagni, e non resta niente.</p><p>Ci arrivi vicino, e poi qualcosa si rompe. Stai bene per qualche settimana, e poi torna tutto come prima. Lo Specchio parte da lì: dal punto preciso che ti riporta indietro, e da come smettere di tornarci.</p></div>
-<h2>Quattro pezzi, un pacco solo</h2>
-<div class="griglia">
-<div class="pezzo"><div class="ic">1</div><div><b>Lo Specchio digitale + bonus</b><span>Subito nella tua area riservata. Lo leggi dal telefono anche stasera.</span><em>27 € sul sito</em></div></div>
-<div class="pezzo"><div class="ic">2</div><div><b>L’audiolibro con la mia voce</b><span>In macchina, a passeggio, la sera a occhi chiusi.</span><em>27 € sul sito</em></div></div>
-<div class="pezzo"><div class="ic">3</div><div><b>Lo Specchio stampato a colori</b><span>176 pagine da sottolineare e tenere sul comodino.</span><em>57 € sul sito</em></div></div>
-<div class="pezzo"><div class="ic">4</div><div><b>Il Playbook dei 30 giorni</b><span>Stampato a colori, 68 pagine: un’attività e un gioco al giorno, con lo spazio per scrivere.</span><em>solo dentro il pacco</em></div></div>
+<div class="prezzo aperto"><span class="vecchio">111 €</span><span class="nuovo">49 €</span><span class="nota">111 € è il totale dei quattro pezzi presi uno per uno sul sito, ai prezzi di oggi. Spedizione inclusa in Italia.</span></div>
+<a class="btn aperto" href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio a 49 €<small>Digitale e audio subito · i libri stampati a casa tua</small></a>
+<div class="scad aperto">Black Friday fino a <b>lunedì 30 novembre alle 23:59</b>. Poi il pacco torna ai prezzi normali, pezzo per pezzo.</div>
+<div class="scad chiuso">Il Black Friday di Lo Specchio è finito il 30 novembre alle 23:59. Il libro resta sul sito: <a href="https://realityarchitecture.it/libro" style="color:#E2B357">realityarchitecture.it/libro</a></div>
+
+<section class="sez">
+<h2>Guadagni, e a fine mese non resta niente.</h2>
+<p>Apri l’app della banca e lo stomaco si chiude. Entra qualcosa in più, e subito arriva la spesa: la macchina, il dentista, la caldaia.</p>
+<p>Alla terza settimana di palestra salta tutto. Ti dici «da lunedì riparto», e lunedì riparti da zero.</p>
+<p>Con la persona che ami va bene per un mese, poi basta una frase detta male e si riapre la solita discussione. Sempre la stessa.</p>
+<p>Ci arrivi vicino, e poi qualcosa si rompe. E la cosa più stancante è che <strong>tu hai fatto tutto giusto</strong>: hai letto, visualizzato, ringraziato, ripetuto le frasi giuste.</p>
+</section>
+
+<section class="sez">
+<h2>Io ci sono passato per vent’anni.</h2>
+<p>Consegnavo la spesa, insegnavo danza, prendevo ogni lavoretto. Ho provato corsi di vendita, ipnosi, affermazioni, psicologia, meditazione, diete. Ogni volta che le cose andavano bene, qualcosa mi riportava indietro. Una sera mi sono ritrovato seduto sul pavimento dell’ingresso con due multe in mano.</p>
+<p>Lì ho smesso di cercare il metodo nuovo e ho guardato il punto preciso che mi riportava indietro, nel momento in cui scattava. Oggi faccio mesi da 20.000 euro, dormo senza dolori, e la ragazza che stava per lasciarmi è mia moglie.</p>
+<p class="pic" style="text-align:left">Risultati personali, non garantiti.</p>
+<p>Lo Specchio è il libro in cui ho messo tutto quel lavoro: 176 pagine, scritte come parlerei a una persona seduta con me al tavolo della cucina.</p>
+</section>
+
+<section class="sez">
+<h2>Immagina tra un mese</h2>
+<div class="tempo">
+<div><b>Domani sera</b>Leggi il primo capitolo sul divano, a colori, e riconosci il tuo «solito» mentre succede.</div>
+<div><b>Tra una settimana</b>Arriva la stretta allo stomaco davanti al conto. Due minuti di respiro e la testa smette di correre.</div>
+<div><b>Tra un mese</b>Riapri il Playbook al giorno 30, ridai il voto al tuo nodo e vedi nero su bianco cosa si è mosso.</div>
 </div>
-<p class="cit">«mi sembrava un po' di avere un caro vecchio amico al mio fianco» · Vittoria R.</p>
-<a class="btn" href="https://www.realityarchitecture.it/black-friday-ordine">Prendo tutto a 49 €<small>Pagamento unico · spedizione inclusa in Italia</small></a>
-<p class="pic">I libri stampati arrivano in 3-4 settimane. Vuoi averli prima? Nel modulo d’ordine c’è la spedizione UPS tracciata (+30 €). Spediamo solo in Italia: vivi all’estero? Scrivici prima, info@realityarchitecture.it</p>
+</section>
+
+<section class="sez">
+<h2>Cosa arriva nel pacco</h2>
+<ul class="bul">
+<li><b>Lo Specchio digitale, 176 pagine e 15 capitoli</b>, subito nella tua area riservata: lo cominci dal telefono stasera, prima che arrivi il pacco.</li>
+<li><b>Il motivo per cui il conto torna sempre alla cifra di sempre</b>, anche nei mesi in cui guadagni di più: il capitolo 9 ti mostra le regole che ti porti dietro da quando vivevi con i tuoi.</li>
+<li><b>Cosa fare la prossima volta che ripeti un’affermazione</b> e una parte di te risponde «bugia». Io le ho lasciate perdere proprio per questo.</li>
+<li><b>Il Respiro Consapevole a 5 livelli</b>, con l’audio guidato: lo usi alla prima stretta allo stomaco, in piedi in cucina, prima della telefonata che ti agita.</li>
+<li><b>6 bonus inclusi</b>: Il tuo punto di partenza (12 frasi, 5 minuti, ti dicono da quale capitolo cominciare), Lasciar andare il peso, Le 5 regole invisibili in video, La Giornata Perfetta, 7 giorni Fast Start con 8 audio della mia voce.</li>
+<li><b>L’audiolibro con la mia voce</b>: lo finisci in macchina, mentre cucini o a passeggio, senza togliere tempo a niente.</li>
+<li><b>Lo Specchio stampato a colori</b>, 176 pagine: lo sottolinei, ci scrivi a margine, lo tieni sul comodino e lo apri al capitolo giusto la sera in cui torna «il solito».</li>
+<li><b>Il Playbook dei 30 giorni stampato a colori</b>, 68 pagine: un’attività e un gioco al giorno, con lo spazio per scrivere. Il giorno 1 dai un voto al tuo nodo, il giorno 30 lo ridai. Da solo non si vende: esiste solo dentro questo pacco.</li>
+</ul>
+</section>
+
+<section class="sez">
+<h2>Chi l’ha letto, e chi ha lavorato con me</h2>
+<div class="test">
+<figure><blockquote>«Prenderò anche il cartaceo perché ci voglio proprio giocare»</blockquote><figcaption>Vittoria R. · sul libro</figcaption></figure>
+<figure><blockquote>«Mi è sembrato che quelle righe le avessi scritte io.»</blockquote><figcaption>Enrico · sul libro</figcaption></figure>
+<figure><blockquote>«Sto leggendo il libro e meravigliosamente semplice, esaustivo, senza fronzoli con un lessico lucido razionale ma che tocca il cuore e l'anima.»</blockquote><figcaption>Silvia L. · sul libro</figcaption></figure>
+<figure><blockquote>«Per la prima volta dopo anni, credo, mi sono svegliata senza stretta allo stomaco, con un senso di leggerezza»</blockquote><figcaption>Simona · ha lavorato con Marco</figcaption></figure>
+<figure><blockquote>«nel tuo corso ho trovato una semplicità davvero shockante - in senso positivo, naturalmente»</blockquote><figcaption>Luca · ha lavorato con Marco</figcaption></figure>
+<figure><blockquote>«Consciamente io avevo già perdonato da tanto.. ma inconsciamente no.»</blockquote><figcaption>Veronica · ha lavorato con Marco</figcaption></figure>
+</div>
+<p class="pic" style="text-align:left">Risultati personali, non garantiti.</p>
+</section>
+
+<section class="sez aperto">
+<h2>Tutto insieme, a 49 €</h2>
+<div style="overflow-x:auto"><table class="stack">
+<tr><td>Lo Specchio digitale con i 6 bonus</td><td>27 €</td></tr>
+<tr><td>Audiolibro con la mia voce</td><td>27 €</td></tr>
+<tr><td>Lo Specchio stampato a colori, spedizione inclusa</td><td>57 €</td></tr>
+<tr><td>Playbook dei 30 giorni stampato a colori</td><td>solo nel pacco</td></tr>
+<tr class="tot"><td>Presi uno per uno sul sito</td><td>111 €</td></tr>
+<tr class="bf"><td>Black Friday, fino a lunedì 30 novembre</td><td>49 €</td></tr>
+</table></div>
+<p>Meno di una cena fuori in due, per smettere di ripartire da capo ogni volta che sei a un passo.</p>
+<a class="btn aperto" href="https://www.realityarchitecture.it/black-friday-ordine">Prendo tutto a 49 €<small>Pagamento unico · spedizione inclusa in Italia</small></a>
+</section>
+
+<section class="sez">
+<h2>Domande</h2>
+<details><summary>Quando arriva il pacco?</summary><p>Il libro digitale, i bonus e l’audiolibro li hai subito nella tua area riservata. Lo Specchio e il Playbook vengono stampati per te e arrivano in 3-4 settimane. Se li vuoi prima, nel modulo d’ordine c’è la spedizione UPS tracciata in 2-3 settimane (+30 €).</p></details>
+<details><summary>Ho già il libro digitale. Ha senso?</summary><p>Sì, se ti piace sottolineare e tenere il libro sul comodino. Con il pacco ricevi anche l’audiolibro e il Playbook dei 30 giorni, che da solo non si vende.</p></details>
+<details><summary>Ho poco tempo per leggere.</summary><p>Per questo c’è l’audiolibro: lo ascolti in macchina o mentre cucini. Il Playbook ti chiede dieci minuti al giorno.</p></details>
+<details><summary>È l’ennesimo libro di crescita personale?</summary><p>Lo Specchio parte dal punto in cui gli altri metodi si fermano: il momento preciso in cui torni indietro. Vittoria l’ha descritto come «un caro vecchio amico al mio fianco».</p></details>
+<details><summary>Come pago? Spedite all’estero?</summary><p>Carta o PayPal nel modulo d’ordine; se preferisci il bonifico, scrivimi su WhatsApp dal link nel modulo. Spediamo solo in Italia: se vivi all’estero, scrivici prima a info@realityarchitecture.it.</p></details>
+</section>
+
+<a class="btn aperto" href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio a 49 €<small>Fino a lunedì 30 novembre alle 23:59</small></a>
+<p class="ps"><b>P.S.</b> Il Black Friday finisce lunedì 30 novembre alle 23:59: dopo, il libro digitale resta a 27 €, l’audiolibro a 27 € e il cartaceo a 57 €, e il Playbook stampato non lo trovi da nessuna parte. Se il conto che torna sempre lì ti è familiare, comincia stasera dal capitolo 1.</p>
 </div></main>
-<div class="barra"><div class="p">49 €<small>invece di 111 € · spedizione inclusa</small></div><a href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio</a></div>
+<div class="barra aperto"><div class="p">49 €<small>invece di 111 € · spedizione inclusa</small></div><a href="https://www.realityarchitecture.it/black-friday-ordine">Lo voglio</a></div>
 <footer class="f"><div class="c">I risultati citati sono personali e non sono una promessa. DE ABUNDANTIA S.R.L. · P.IVA 05127630233 · Via Belvedere 30, 37064 Povegliano Veronese (VR) · <a href="https://www.realityarchitecture.it/privacy">Privacy</a> · <a href="https://www.realityarchitecture.it/condizioni-vendita">Condizioni di vendita</a></div></footer>
+<script>(function(){if(Date.now()>Date.parse("2026-11-30T23:59:59+01:00")&&!/anteprima/.test(location.search))document.body.classList.add("finito")})();</script>
 <!-- MATE · pixel + banner cookie per le pagine Systeme senza quiz (checkout, OTO, grazie). Va nel "codice header" della pagina.
      Stessa scelta del quiz: localStorage 'mate_cookie' (si/no), valida su tutte le pagine dello stesso dominio.
      Evento della pagina: window.MATE_EVENTO = {nome:'Purchase', valore:9} impostato PRIMA di questo blocco (solo nelle pagine di grazie). -->

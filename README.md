@@ -97,3 +97,6 @@ Togliere `CNAME` da questo repo e il dominio dalle sue impostazioni Pages, poi r
 
 Modificare i file e fare push su `main`: GitHub Pages pubblica da solo in circa un minuto.
 Immagini: JPG qualità ~75 + WebP (`cwebp -q 72`), larghezza massima 1536 px.
+
+## Regola fissa di Marco (11/11/2026): principi di vendita sempre
+Ogni pagina che vende qualcosa, anche un'offerta piccola, ha SEMPRE il pacchetto completo: headline che ferma, dolore con scene vere e parole del mercato, sogno concreto, storia, bullet alla Clayton Makepeace dimensionalizzati, prova sociale vera (nome + iniziale), offerta impilata con valore vero pezzo per pezzo, scarsità/scadenza solo vere, garanzia se c'è, FAQ che sciolgono le obiezioni, P.S., CTA ripetuta. Marco: «quando si vende qualcosa mettiamo tutti i principi della vendita».
