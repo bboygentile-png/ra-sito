@@ -455,7 +455,7 @@ body{padding-bottom:84px}
 @media(min-width:900px){.sra-w{grid-template-columns:280px minmax(0,1fr);gap:24px}.sra-nav{position:sticky;top:14px}.sra-lez{padding:26px 28px}}
 </style><script>window.MATE_EVENTO={nome:'ViewContent',valore:19,prodotto:'Stavolta Resto'}</script><script>
 window.raCookie=window.raCookie||function(){
-  try{localStorage.removeItem('mate_cookie')}catch(x){}try{document.cookie='mate_cookie=; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=0'}catch(x){}
+  try{localStorage.removeItem('mate_cookie')}catch(x){}try{document.cookie='mate_cookie=x; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=15552000'}catch(x){}
   var h=location.hostname.replace(/^www\./,'');
   ['_fbp','_fbc'].forEach(function(n){
     [h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});
@@ -467,7 +467,7 @@ window.raCookie=window.raCookie||function(){
 <script>
 (function(){
 var PIXEL_ID='1808505083359613', PRIVACY_URL='https://www.realityarchitecture.it/privacy';
-function ck(){var v='';try{v=localStorage.getItem('mate_cookie')||''}catch(e){}if(!v){var m=document.cookie.match(/(?:^|; )mate_cookie=(si|no)(?:;|$)/);if(m){v=m[1];try{localStorage.setItem('mate_cookie',v)}catch(e){}}}return v}
+function ck(){var v='',m=document.cookie.match(/(?:^|; )mate_cookie=(si|no|x)(?:;|$)/);if(m){v=m[1]==='x'?'':m[1];try{if(v)localStorage.setItem('mate_cookie',v);else localStorage['removeItem']('mate_cookie')}catch(e){}return v}try{v=localStorage.getItem('mate_cookie')||''}catch(e){}return v}
 function ckSet(v){try{localStorage.setItem('mate_cookie',v)}catch(e){}try{document.cookie='mate_cookie='+v+'; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=15552000'}catch(e){}}
 var fatto=0;
 function px(){if(fatto||ck()!=='si')return;fatto=1;
@@ -485,7 +485,7 @@ function banner(){if(ck()||document.getElementById('mate-ck'))return;
  d.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-ck');if(!v)return;ckSet(v);d.remove();raCkSpazio(null);if(v==='si')px()});
  document.body.appendChild(d);raCkSpazio(d)}
 /* «Preferenze cookie» nel footer: cancella la scelta e i cookie di Meta, poi rimostra il banner (se il pixel era già partito ricarica, così resta spento) */
-window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}try{document.cookie='mate_cookie=; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=0'}catch(e){}
+window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}try{document.cookie='mate_cookie=x; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=15552000'}catch(e){}
  var h=location.hostname.replace(/^www\./,'');['_fbp','_fbc'].forEach(function(n){[h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'});
  if(era){location.reload();return}var v=document.getElementById('mate-ck');if(v)v.remove();banner()};
 function dopo(fn){requestAnimationFrame(function(){setTimeout(fn,0)})}dopo(px);
