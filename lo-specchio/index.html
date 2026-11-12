@@ -448,7 +448,7 @@ body{padding-bottom:84px}
 </footer>
 <script>
 window.raCookie=window.raCookie||function(){
-  try{localStorage.removeItem('mate_cookie')}catch(x){}
+  try{localStorage.removeItem('mate_cookie')}catch(x){}try{document.cookie='mate_cookie=; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=0'}catch(x){}
   var h=location.hostname.replace(/^www\./,'');
   ['_fbp','_fbc'].forEach(function(n){
     [h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});
@@ -465,8 +465,8 @@ window.raCookie=window.raCookie||function(){
 <script>
 (function(){
 var PIXEL_ID='1808505083359613', PRIVACY_URL='https://www.realityarchitecture.it/privacy';
-function ck(){try{return localStorage.getItem('mate_cookie')||''}catch(e){return ''}}
-function ckSet(v){try{localStorage.setItem('mate_cookie',v)}catch(e){}}
+function ck(){var v='';try{v=localStorage.getItem('mate_cookie')||''}catch(e){}if(!v){var m=document.cookie.match(/(?:^|; )mate_cookie=(si|no)(?:;|$)/);if(m){v=m[1];try{localStorage.setItem('mate_cookie',v)}catch(e){}}}return v}
+function ckSet(v){try{localStorage.setItem('mate_cookie',v)}catch(e){}try{document.cookie='mate_cookie='+v+'; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=15552000'}catch(e){}}
 var fatto=0;
 function px(){if(fatto||ck()!=='si')return;fatto=1;
  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -478,12 +478,12 @@ function banner(){if(ck()||document.getElementById('mate-ck'))return;
  var d=document.createElement('div');d.id='mate-ck';
  d.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:rgba(29,26,23,.96);color:#FBF7F0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));font:13px/1.35 Poppins,system-ui,sans-serif;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center');
  /* 19/10 (Marco via COO): barra sottile in basso invece del riquadro; i due pulsanti restano uguali per peso e colore del bordo (Garante 2021) */
- d.innerHTML='<span style="flex:1 1 200px;min-width:0">Cookie di misurazione Meta: scegli tu. <a href="'+PRIVACY_URL+'" target="_blank" rel="noopener" style="color:#C9973F">Informativa</a></span>'+
+ d.innerHTML='<span style="flex:1 1 200px;min-width:0">Mi aiuti con un clic? I cookie di Meta mi dicono quali annunci sono utili, così li mostro meno a chi non interessano. Scegli tu. <a href="'+PRIVACY_URL+'" target="_blank" rel="noopener" style="color:#C9973F">Informativa</a></span>'+
   '<span style="display:flex;gap:8px"><button data-ck="si" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Accetto</button><button data-ck="no" style="min-height:40px;min-width:92px;padding:6px 12px;font-size:14px;border:1px solid #C9973F;border-radius:8px;background:transparent;color:#FBF7F0;font-weight:600;cursor:pointer">Rifiuto</button></span>';
  d.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-ck');if(!v)return;ckSet(v);d.remove();raCkSpazio(null);if(v==='si')px()});
  document.body.appendChild(d);raCkSpazio(d)}
 /* «Preferenze cookie» nel footer: cancella la scelta e i cookie di Meta, poi rimostra il banner (se il pixel era già partito ricarica, così resta spento) */
-window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}
+window.raCookie=function(){var era=fatto;try{localStorage.removeItem('mate_cookie')}catch(e){}try{document.cookie='mate_cookie=; domain=.realityarchitecture.it; path=/; SameSite=Lax; Secure; max-age=0'}catch(e){}
  var h=location.hostname.replace(/^www\./,'');['_fbp','_fbc'].forEach(function(n){[h,'.'+h,location.hostname].forEach(function(d){document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d});document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'});
  if(era){location.reload();return}var v=document.getElementById('mate-ck');if(v)v.remove();banner()};
 function dopo(fn){requestAnimationFrame(function(){setTimeout(fn,0)})}dopo(px);
