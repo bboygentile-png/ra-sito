@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wake Up Souls 2027 · Ivan Martellato</title>
+<meta name="description" content="Wake Up Souls 2027. Sei giorni a Phuket, dal 22 al 27 gennaio 2027, con Ivan Martellato. 15 posti, tutto incluso. Si entra solo con una candidatura.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0D0A1A;
+    --night-2: #130E2B;
+    --indigo: #1A1040;
+    --gold: #C8A96E;
+    --gold-deep: #8B7355;
+    --gold-light: #E8C878;
+    --ivory: #F5F0E8;
+    --ivory-80: rgba(245, 240, 232, .82);
+    --ivory-60: rgba(245, 240, 232, .62);
+    --ivory-40: rgba(245, 240, 232, .40);
+    --line: rgba(200, 169, 110, .28);
+    --line-soft: rgba(200, 169, 110, .14);
+    --panel: rgba(26, 16, 64, .45);
+    --danger: #E3A08A;
+
+    --f-mark: "Cinzel", "Times New Roman", serif;
+    --f-edit: "Cormorant Garamond", Georgia, serif;
+    --f-body: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --gutter: 16px;
+    --maxw: 1120px;
+    --textw: 640px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--night);
+    color: var(--ivory-80);
+    font-family: var(--f-body);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--gold-light); }
+  p { margin: 0 0 1.1em; }
+  strong { color: var(--ivory); font-weight: 500; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+  .narrow { max-width: var(--textw); margin-left: auto; margin-right: auto; }
+  section { position: relative; padding: 88px 0; }
+
+  /* Tipografia */
+  .eyebrow {
+    font-family: var(--f-mark);
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 18px;
+  }
+  h1, h2, h3 { font-family: var(--f-edit); font-weight: 500; color: var(--ivory); margin: 0; }
+  h2 {
+    font-size: clamp(34px, 7vw, 54px);
+    line-height: 1.08;
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+  h3 { font-size: 26px; line-height: 1.2; margin-bottom: 10px; }
+  .lead { font-family: var(--f-edit); font-size: clamp(22px, 4.4vw, 27px); line-height: 1.45; color: var(--ivory); }
+  .gold { color: var(--gold); }
+  .rule {
+    display: flex; align-items: center; gap: 14px; justify-content: center;
+    color: var(--gold); margin: 0 auto 30px; max-width: 240px;
+  }
+  .rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  /* Pulsanti */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 54px; padding: 0 34px;
+    font-family: var(--f-mark); font-size: 14px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--night); text-decoration: none;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-deep));
+    border: 0; border-radius: 2px; cursor: pointer;
+    box-shadow: 0 10px 30px -12px rgba(232, 200, 120, .55);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 34px -10px rgba(232, 200, 120, .7); }
+  .btn:focus-visible { outline: 2px solid var(--ivory); outline-offset: 3px; }
+  .btn-ghost {
+    background: transparent; color: var(--gold-light); box-shadow: none;
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { border-color: var(--gold); box-shadow: none; }
+  .cta-block { text-align: center; margin-top: 44px; }
+  .cta-note { font-size: 14px; color: var(--ivory-40); margin-top: 14px; }
+
+  /* Header */
+  .top {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 5;
+    padding: 22px 0;
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ivory); }
+  .mark svg { width: 30px; height: 30px; flex: none; }
+  .mark-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .mark-text b { font-family: var(--f-mark); font-weight: 500; font-size: 14px; letter-spacing: .3em; }
+  .mark-text small { font-family: var(--f-edit); font-style: italic; font-size: 14px; letter-spacing: .02em; color: var(--gold); margin-top: 2px; }
+  .top .btn { min-height: 42px; padding: 0 20px; font-size: 12px; }
+
+  /* Hero */
+  .hero {
+    min-height: min(100svh, 880px); display: flex; align-items: flex-end;
+    padding: 140px 0 72px;
+    background:
+      linear-gradient(180deg, rgba(13,10,26,.6) 0%, rgba(13,10,26,.62) 30%, rgba(13,10,26,.9) 58%, var(--night) 100%),
+      radial-gradient(ellipse at 70% 30%, rgba(232,200,120,.18), transparent 60%),
+      url("img/wus-spazio.jpg") center 30% / cover no-repeat,
+      var(--indigo);
+  }
+  .hero h1 {
+    font-size: clamp(54px, 15vw, 128px);
+    line-height: .95; font-style: italic; letter-spacing: -.01em;
+    margin-bottom: 26px;
+  }
+  .hero .lead { max-width: 620px; margin-bottom: 26px; }
+  .hero .eyebrow, .hero h1, .hero .lead, .facts { text-shadow: 0 1px 14px rgba(13,10,26,.85); }
+  .facts {
+    display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0 0 34px; padding: 0; list-style: none;
+    font-family: var(--f-mark); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light);
+  }
+  .facts li { display: flex; align-items: center; gap: 10px; }
+  .facts li + li::before { content: "✦"; font-size: 9px; color: var(--gold-deep); margin-right: 12px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  /* Lettera */
+  .letter p { font-size: 18px; }
+  .letter .open { font-family: var(--f-edit); font-size: 34px; font-style: italic; color: var(--gold); margin-bottom: 16px; }
+  .quote {
+    margin: 40px 0 0; padding: 30px 0 4px; border-top: 1px solid var(--line);
+    font-family: var(--f-edit); font-style: italic; font-size: clamp(26px, 5vw, 34px); line-height: 1.3; color: var(--ivory);
+  }
+  .quote cite { display: block; margin-top: 14px; font-family: var(--f-mark); font-style: normal; font-size: 12px; letter-spacing: .24em; color: var(--gold); }
+
+  /* Cielo */
+  .sky {
+    background:
+      radial-gradient(circle at 50% 18%, rgba(232,200,120,.16), transparent 42%),
+      radial-gradient(ellipse at 50% 100%, var(--indigo), transparent 70%),
+      var(--night-2);
+    overflow: hidden;
+  }
+  .stars {
+    position: absolute; inset: 0; pointer-events: none; opacity: .55;
+    background-image:
+      radial-gradient(1px 1px at 12% 22%, #fff, transparent),
+      radial-gradient(1px 1px at 28% 68%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 44% 12%, var(--gold-light), transparent),
+      radial-gradient(1px 1px at 61% 40%, #fff, transparent),
+      radial-gradient(1px 1px at 77% 18%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 88% 62%, var(--gold-light), transparent),
+      radial-gradient(1px 1px at 8% 84%, #fff, transparent),
+      radial-gradient(1px 1px at 53% 88%, #fff, transparent),
+      radial-gradient(1px 1px at 93% 90%, #fff, transparent);
+  }
+  .moon {
+    width: 150px; height: 150px; margin: 0 auto 40px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 35%, #FFF8E6, var(--gold-light) 45%, var(--gold) 75%, var(--gold-deep));
+    box-shadow: 0 0 60px 10px rgba(232,200,120,.25), 0 0 160px 40px rgba(232,200,120,.10);
+    position: relative;
+  }
+  .sky-data {
+    display: grid; grid-template-columns: 1fr; gap: 1px; margin: 34px 0;
+    background: var(--line-soft); border: 1px solid var(--line-soft);
+  }
+  .sky-data div { background: var(--night-2); padding: 18px 20px; }
+  .sky-data dt { font-family: var(--f-mark); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+  .sky-data dd { margin: 4px 0 0; font-family: var(--f-edit); font-size: 23px; color: var(--ivory); }
+
+  /* Immagine piena */
+  .band {
+    min-height: min(68vh, 600px); display: flex; align-items: flex-end; padding: 0 0 56px;
+    background:
+      linear-gradient(180deg, var(--night) 0%, rgba(13,10,26,.15) 25%, rgba(13,10,26,.45) 70%, var(--night) 100%),
+      var(--band-img) var(--band-pos, center 45%) / cover no-repeat,
+      var(--indigo);
+  }
+  .band-cerchio { --band-img: url("img/wus-cerchio.jpg"); }
+  .band-andamane { --band-img: url("img/wus-andamane.jpg"); --band-pos: center 55%; }
+  .band .cap { margin-top: 18px; }
+  .cap {
+    display: block; font-family: var(--f-mark); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold); line-height: 1.5;
+  }
+  .band p {
+    font-family: var(--f-edit); font-style: italic; font-size: clamp(26px, 5.5vw, 44px); line-height: 1.2; color: var(--ivory);
+    max-width: 760px; margin: 0; text-shadow: 0 2px 24px rgba(0,0,0,.5);
+  }
+
+  /* Cosa succede */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .card {
+    border: 1px solid var(--line-soft); background: var(--panel);
+    padding: 30px 26px; border-radius: 2px; position: relative;
+  }
+  .card .num { font-family: var(--f-mark); font-size: 12px; letter-spacing: .24em; color: var(--gold); margin-bottom: 14px; display: block; }
+  .card p:last-child { margin-bottom: 0; }
+  .y2026 {
+    border-left: 1px solid var(--gold); padding: 6px 0 6px 22px; margin: 0 0 44px;
+  }
+  .y2026 p:last-child { margin-bottom: 0; }
+
+  /* Incluso */
+  .included {
+    background:
+      linear-gradient(180deg, var(--night), rgba(13,10,26,.88) 30%, rgba(13,10,26,.92)),
+      url("img/wus-spiaggia.jpg") center 40% / cover no-repeat,
+      var(--night-2);
+  }
+  .inc-list {
+    list-style: none; padding: 0; margin: 36px 0 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line);
+  }
+  .inc-list li {
+    background: var(--night); padding: 26px 14px; text-align: center;
+    font-family: var(--f-mark); font-size: 15px; letter-spacing: .18em; text-transform: uppercase; color: var(--ivory);
+  }
+  .inc-list li span { display: block; color: var(--gold); font-size: 20px; margin-bottom: 8px; letter-spacing: 0; }
+  .dates-line { text-align: center; margin-top: 30px; font-family: var(--f-edit); font-size: 22px; color: var(--ivory); display: flex; flex-direction: column; gap: 2px; }
+  @media (min-width: 700px) { .dates-line { flex-direction: row; justify-content: center; gap: 0; } .dates-line span + span::before { content: "·"; margin: 0 14px; color: var(--gold); } }
+
+  /* Stack di valore: cosa porti a casa */
+  .stack { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 40px; text-align: left; }
+  .sblock { border: 1px solid var(--line); background: rgba(13,10,26,.82); padding: 24px 18px 8px; }
+  .sblock-head {
+    display: flex; align-items: center; gap: 12px; margin: 0 0 16px;
+    font-family: var(--f-mark); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-light);
+  }
+  .sblock-head span {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center; font-size: 12px; letter-spacing: 0; color: var(--gold);
+  }
+  .sblock .inc-list { margin: 0 0 16px; }
+  .sblock .inc-list li { font-size: 13px; letter-spacing: .14em; padding: 18px 8px; }
+  .sblock .inc-list li span { font-size: 18px; margin-bottom: 6px; }
+  .sblock-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; font-size: 15px; line-height: 1.5; margin: 0 0 16px; }
+  .sitems { list-style: none; padding: 0; margin: 0; }
+  .sitems li { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid var(--line-soft); }
+  .sitems li:first-child { border-top: 0; padding-top: 0; }
+  .sname { flex: 1; min-width: 0; }
+  .sname strong { display: block; font-family: var(--f-edit); font-size: 22px; line-height: 1.25; font-weight: 500; margin-bottom: 4px; }
+  .sname span { display: block; font-size: 15px; line-height: 1.55; color: var(--ivory-60); }
+  .sval { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; padding-top: 4px; }
+  .sval s { font-family: var(--f-edit); font-size: 21px; color: var(--ivory-60); text-decoration-color: var(--danger); text-decoration-thickness: 1.5px; white-space: nowrap; }
+  .inc {
+    display: inline-block; font-family: var(--f-mark); font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--night); background: linear-gradient(135deg, var(--gold-light), var(--gold)); padding: 5px 9px; border-radius: 2px; white-space: nowrap;
+  }
+  .stack-note { text-align: center; margin: 14px 0 0; font-size: 15px; color: var(--ivory-60); }
+  @media (min-width: 700px) {
+    .stack { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .sblock { padding: 28px 26px 12px; }
+  }
+
+  /* Video */
+  .video-box {
+    position: relative; width: 100%; aspect-ratio: 16 / 9;
+    border: 1px dashed var(--gold); border-radius: 2px;
+    background: radial-gradient(ellipse at center, rgba(26,16,64,.9), var(--night));
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    text-align: center; padding: 16px; overflow: hidden;
+  }
+  .video-box iframe, .video-box video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .play {
+    width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center; color: var(--gold);
+  }
+  .vlabel { font-family: var(--f-mark); font-size: 12px; letter-spacing: .22em; color: var(--gold-light); }
+  .vsub { font-size: 13px; color: var(--ivory-40); }
+  .proof {
+    display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 40px;
+  }
+  .proof-img {
+    min-height: 260px; border-radius: 2px;
+    background:
+      linear-gradient(180deg, transparent 40%, rgba(13,10,26,.85)),
+      url("img/wus-catamarano.jpg") center 35% / cover no-repeat,
+      var(--indigo);
+    display: flex; align-items: flex-end; padding: 22px;
+  }
+  .proof-img p { margin: 0; font-family: var(--f-edit); font-style: italic; font-size: 22px; color: var(--ivory); }
+  .tests { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 18px; }
+  .tests .video-box { aspect-ratio: 9 / 12; }
+
+
+  /* Galleria e video 2026 */
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gallery figure { margin: 0; position: relative; overflow: hidden; aspect-ratio: 2 / 3; background: var(--indigo); }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 12px 10px;
+    background: linear-gradient(180deg, transparent, rgba(13,10,26,.85));
+    font-family: var(--f-mark); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light);
+  }
+  .videos-head { margin-top: 80px; max-width: 640px; }
+  .videos-head h3 { font-size: clamp(30px, 6vw, 42px); font-style: italic; margin-bottom: 12px; }
+  .videos-head p:not(.eyebrow) { color: var(--ivory-60); font-size: 16px; }
+  .days { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 12px; margin-top: 26px; }
+  .day { margin: 0; }
+  .trailer { text-align: center; padding-top: 10px; }
+  .trailer .trailer-fig { max-width: 340px; margin: 26px auto 30px; }
+  .trailer .vplay { width: 76px; height: 76px; }
+  .vwrap { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: var(--night-2); border: 1px solid var(--line-soft); }
+  .vwrap video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vwrap::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, transparent 55%, rgba(13,10,26,.55));
+    transition: opacity .25s ease;
+  }
+  .vplay {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+    width: 64px; height: 64px; border-radius: 50%; cursor: pointer;
+    border: 1px solid var(--gold-light); background: rgba(13,10,26,.55); color: var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+    transition: transform .2s ease, background .2s ease;
+  }
+  .vplay:hover { background: rgba(13,10,26,.75); transform: translate(-50%, -50%) scale(1.06); }
+  .vplay:focus-visible { outline: 2px solid var(--ivory); outline-offset: 3px; }
+  .vplay svg { width: 22px; height: 22px; margin-left: 4px; }
+  .vlen {
+    position: absolute; right: 10px; bottom: 10px; z-index: 2; font-family: var(--f-mark); font-size: 11px; letter-spacing: .14em;
+    color: var(--ivory); text-shadow: 0 1px 6px rgba(0,0,0,.7);
+  }
+  .day.playing .vplay, .day.playing .vlen, .day.playing .vwrap::after { opacity: 0; pointer-events: none; }
+  .day figcaption { margin-top: 12px; }
+  .day figcaption .cap { font-size: 12px; letter-spacing: .22em; }
+  .day figcaption span:last-child { display: block; font-family: var(--f-edit); font-style: italic; font-size: 18px; line-height: 1.3; color: var(--ivory-80); margin-top: 2px; }
+  @media (min-width: 700px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .days { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  }
+
+  /* Il posto, l'Asia, la tavola, il gruppo */
+  .place { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: start; }
+  .photo { margin: 0; }
+  .photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 70%; border: 1px solid var(--line-soft); }
+  .photo figcaption { margin-top: 10px; }
+  .asia { margin-top: 72px; }
+  .asia h3 { font-size: clamp(30px, 6vw, 42px); font-style: italic; margin-bottom: 12px; }
+  .asia-list { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: 1fr; gap: 0 36px; }
+  .asia-list li { border-top: 1px solid var(--line); padding: 22px 0 8px; }
+  .asia-list h4 { margin: 0 0 8px; font-family: var(--f-mark); font-weight: 500; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); }
+  .asia-list p { margin: 0 0 14px; }
+  .life { background: var(--night-2); }
+  .life-grid { display: grid; grid-template-columns: 1fr; gap: 64px; }
+  .life-block h3 { font-size: clamp(30px, 6vw, 40px); font-style: italic; margin-bottom: 18px; }
+  .life-block .photo { margin: 30px 0 0; }
+  .fruit {
+    display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 4px 0 22px;
+  }
+  .fruit li {
+    font-family: var(--f-mark); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light);
+    border: 1px solid var(--line); padding: 6px 12px; border-radius: 40px;
+  }
+
+  /* Per chi */
+  .two { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .who { border: 1px solid var(--line-soft); padding: 30px 26px; background: var(--panel); }
+  .who.no { background: transparent; }
+  .who h3 { font-style: italic; }
+  .who ul { list-style: none; padding: 0; margin: 18px 0 0; }
+  .who li { position: relative; padding: 0 0 14px 28px; }
+  .who li::before { content: "✦"; position: absolute; left: 0; top: 1px; color: var(--gold); font-size: 13px; }
+  .who.no li::before { content: "✕"; color: var(--ivory-40); }
+
+  /* Guide */
+  .guides { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 10px; }
+  .guide { border: 1px solid var(--line-soft); border-top: 1px solid var(--gold); background: var(--panel); padding: 28px 24px 26px; }
+  .guide p:last-child { margin-bottom: 0; }
+  .sigil { width: 52px; height: 52px; display: block; margin-bottom: 18px; }
+  .guide-photo { margin: -28px -24px 22px; position: relative; }
+  .guide-photo img, .guide-photo .sigil-box { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 30%; display: block; }
+  .guide-photo .sigil-box {
+    display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 50% 45%, rgba(232,200,120,.14), transparent 60%), var(--night-2);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .guide-photo .sigil-box .sigil { width: 96px; height: 96px; margin: 0; }
+  @media (min-width: 700px) { .guide-photo img, .guide-photo .sigil-box { aspect-ratio: 4 / 5; } }
+  .guide h3 { font-family: var(--f-mark); font-size: 20px; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; }
+  .guide .gq { font-family: var(--f-edit); font-style: italic; font-size: 19px; color: var(--ivory); border-left: 1px solid var(--gold); padding-left: 14px; margin: 18px 0 0; }
+  .guide .role { font-family: var(--f-edit); font-style: italic; font-size: 20px; color: var(--gold); margin-bottom: 12px; }
+  .story {
+    margin: 0 0 54px; padding: 32px 26px; border: 1px solid var(--line-soft);
+    background:
+      linear-gradient(180deg, rgba(13,10,26,.82), rgba(13,10,26,.94)),
+      var(--night-2);
+  }
+  .story p { font-size: 18px; }
+  .half-head { margin: 64px 0 26px; max-width: 760px; }
+  .half-head:first-of-type { margin-top: 48px; }
+  .half-head .cap { margin-bottom: 10px; }
+  .half-head h3 { font-size: clamp(30px, 6vw, 42px); font-style: italic; margin-bottom: 14px; }
+  .half-head p { margin-bottom: 0; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 18px; }
+  .pair .photo img { aspect-ratio: 3 / 4; object-position: center 40%; }
+  .pair .photo figcaption { font-size: 10px; letter-spacing: .16em; }
+  .card .safe { font-size: 14px; color: var(--ivory-60); border-top: 1px solid var(--line-soft); padding-top: 12px; margin-top: 4px; }
+  .story p:last-child { margin-bottom: 0; }
+
+  /* Bonus */
+  .bonus {
+    border: 2px dashed var(--gold-light); padding: 34px 24px; text-align: center;
+    background: repeating-linear-gradient(45deg, rgba(232,200,120,.05) 0 12px, transparent 12px 24px);
+  }
+  .bonus .tag {
+    display: inline-block; font-family: var(--f-mark); font-size: 11px; letter-spacing: .16em; color: var(--night);
+    background: var(--gold-light); padding: 6px 12px; margin-bottom: 16px;
+  }
+
+  /* Garanzie */
+  .guarantees { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .gcard { text-align: center; padding: 34px 22px; border: 1px solid var(--line); }
+  .gseal {
+    width: 62px; height: 62px; margin: 0 auto 18px; border-radius: 50%; border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-mark); color: var(--gold); font-size: 18px;
+  }
+
+  /* Posti */
+  .seats { text-align: center; }
+  .seat-row { display: grid; grid-template-columns: repeat(5, 18px); justify-content: center; gap: 12px; margin: 30px auto; }
+  @media (min-width: 700px) { .seat-row { grid-template-columns: repeat(15, 18px); } }
+  .seat { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--gold); background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-deep)); }
+  .big-num { font-family: var(--f-edit); font-size: clamp(96px, 26vw, 180px); line-height: 1; color: var(--gold); font-style: italic; }
+
+  /* Processo */
+  .steps { list-style: none; padding: 0; margin: 0 0 50px; display: grid; grid-template-columns: 1fr; gap: 14px; counter-reset: s; }
+  .steps li {
+    counter-increment: s; position: relative; padding: 24px 22px 22px 78px;
+    border: 1px solid var(--line-soft); background: var(--panel);
+  }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 22px; top: 22px;
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-mark); color: var(--gold); font-size: 16px;
+  }
+  .steps strong { display: block; font-family: var(--f-edit); font-size: 23px; font-weight: 500; margin-bottom: 4px; }
+  .steps p { margin: 0; }
+
+  /* Modulo */
+  .apply { background: radial-gradient(ellipse at 50% 0%, var(--indigo), var(--night) 70%); }
+  .form-shell {
+    max-width: 720px; margin: 0 auto; border: 1px solid var(--line);
+    background: rgba(13,10,26,.75); padding: 34px 22px;
+  }
+  .form-shell h3 { font-style: italic; }
+  fieldset { border: 0; padding: 0; margin: 0 0 30px; min-width: 0; }
+  legend {
+    font-family: var(--f-mark); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold);
+    padding: 0; margin-bottom: 16px; width: 100%; border-bottom: 1px solid var(--line-soft); padding-bottom: 10px;
+  }
+  .field { margin-bottom: 20px; }
+  .field label { display: block; color: var(--ivory); font-weight: 400; margin-bottom: 7px; font-size: 16px; line-height: 1.45; }
+  .opt { color: var(--ivory-40); font-weight: 300; font-size: 14px; }
+  .hint { display: block; font-size: 14px; color: var(--ivory-60); margin: -2px 0 8px; line-height: 1.5; }
+  input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], select, textarea {
+    width: 100%; font: inherit; font-size: 16px; color: var(--ivory);
+    background: rgba(245,240,232,.04); border: 1px solid var(--line); border-radius: 2px;
+    padding: 13px 14px; min-height: 50px; appearance: none; -webkit-appearance: none;
+  }
+  input[type=date], input[type=time] { color-scheme: dark; }
+  select {
+    background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+    background-position: calc(100% - 20px) 22px, calc(100% - 15px) 22px; background-size: 5px 5px; background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+  select option { background: var(--night-2); color: var(--ivory); }
+  textarea { min-height: 112px; resize: vertical; line-height: 1.55; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,169,110,.18); }
+  .row { display: grid; grid-template-columns: 1fr; gap: 0 16px; }
+  .birth-why {
+    display: flex; gap: 14px; align-items: flex-start;
+    border: 1px solid var(--line-soft); background: rgba(26,16,64,.5); padding: 16px; margin-bottom: 20px; font-size: 15px; line-height: 1.55;
+  }
+  .birth-why svg { flex: none; width: 26px; height: 26px; margin-top: 2px; }
+  .check { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; margin-bottom: 14px; color: var(--ivory-80); }
+  .check input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--gold); flex: none; }
+  .field label.check { display: flex; font-size: 15px; font-weight: 300; color: var(--ivory-80); margin-bottom: 0; }
+  .err { display: none; color: var(--danger); font-size: 14px; margin-top: 6px; }
+  .field.invalid .err { display: block; }
+  .field.invalid input, .field.invalid textarea, .field.invalid select { border-color: var(--danger); }
+  .tel-riga { display: flex; gap: 8px; }
+  .tel-riga input { flex: 1; min-width: 0; }
+  .prefisso {
+    position: relative; flex: none; display: flex; align-items: center; gap: 12px;
+    min-width: 96px; min-height: 50px; padding: 0 14px;
+    font-size: 16px; color: var(--ivory);
+    background: rgba(245,240,232,.04); border: 1px solid var(--line); border-radius: 2px;
+  }
+  .prefisso::after {
+    content: ""; width: 7px; height: 7px; margin: -4px 0 0 auto;
+    border-right: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold); transform: rotate(45deg);
+  }
+  .prefisso select {
+    position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; padding: 0; opacity: 0; cursor: pointer;
+    font: inherit; font-size: 16px; color: var(--ivory); background: var(--night-2); color-scheme: dark; border: 0;
+  }
+  .prefisso:focus-within { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,169,110,.18); }
+  .field.invalid .prefisso { border-color: var(--danger); }
+  .check a { color: var(--gold-light); }
+  .trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .invio-err { color: var(--danger); font-size: 15px; line-height: 1.5; margin: 14px 0 0; }
+  .submit-row { text-align: center; margin-top: 10px; }
+  .submit-row .btn { width: 100%; max-width: 420px; letter-spacing: .12em; padding: 0 18px; }
+  .done { display: none; text-align: center; padding: 20px 0; }
+  .done.show { display: block; }
+  .done .moon { width: 90px; height: 90px; margin-bottom: 26px; }
+  .done h3 { font-size: 40px; font-style: italic; margin-bottom: 18px; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--line-soft); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative;
+    font-family: var(--f-edit); font-size: 23px; color: var(--ivory); line-height: 1.3;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font-family: var(--f-mark); color: var(--gold); font-size: 24px; transition: transform .2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { padding-right: 10px; }
+
+  /* Chiusura */
+  .closing {
+    background:
+      linear-gradient(180deg, var(--night) 0%, rgba(13,10,26,.7) 40%, rgba(13,10,26,.9) 100%),
+      url("img/wus-tramonto.jpg") center 40% / cover no-repeat,
+      var(--indigo);
+  }
+  .sign { font-family: var(--f-edit); font-style: italic; font-size: 30px; color: var(--gold); margin-top: 30px; }
+
+  footer { padding: 40px 0 120px; border-top: 1px solid var(--line-soft); font-size: 13px; color: var(--ivory-40); text-align: center; }
+  footer .mark { justify-content: center; margin-bottom: 18px; text-align: left; }
+  footer p { margin-bottom: .6em; }
+
+  /* Pulsante fisso sul telefono */
+  .sticky {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(13,10,26,0), rgba(13,10,26,.92) 30%);
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .sticky .btn { width: 100%; }
+  .sticky.hide { transform: translateY(110%); opacity: 0; pointer-events: none; }
+
+  @media (min-width: 700px) {
+    :root { --gutter: 32px; }
+    section { padding: 120px 0; }
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(13,10,26,.55) 0%, rgba(13,10,26,.2) 35%, rgba(13,10,26,.82) 78%, var(--night) 100%),
+        radial-gradient(ellipse at 70% 30%, rgba(232,200,120,.18), transparent 60%),
+        url("img/wus-spazio.jpg") center 40% / cover no-repeat,
+        var(--indigo);
+    }
+    .band { min-height: 620px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .pair { gap: 18px; }
+    .pair .photo figcaption { font-size: 11px; letter-spacing: .2em; }
+    .two { grid-template-columns: 1fr 1fr; }
+    .guides { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .guarantees { grid-template-columns: repeat(3, 1fr); }
+    .tests { grid-template-columns: repeat(3, 1fr); }
+    .proof { grid-template-columns: 1.3fr 1fr; align-items: stretch; }
+    .place { grid-template-columns: 1.15fr .85fr; gap: 56px; }
+    .asia-list { grid-template-columns: 1fr 1fr; }
+    .life-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
+    .inc-list { grid-template-columns: repeat(3, 1fr); }
+    .sky-data { grid-template-columns: 1fr 1fr 1.7fr; }
+    .row { grid-template-columns: 1fr 1fr; }
+    .row.three { grid-template-columns: 1fr 1fr 1.4fr; }
+    .form-shell { padding: 50px 48px; }
+    .steps { grid-template-columns: repeat(3, 1fr); }
+    .steps li { padding: 78px 24px 26px; }
+    .steps li::before { top: 24px; left: 24px; }
+  }
+  @media (min-width: 960px) {
+    .sticky { display: none; }
+    footer { padding-bottom: 50px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 420px) {
+    .top .btn { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, .sticky { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inizio" aria-label="Wake Up Souls, by Ivan Martellato">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#C8A96E" stroke-width="1"/>
+        <circle cx="20" cy="20" r="12" stroke="#C8A96E" stroke-width="1"/>
+        <circle cx="20" cy="20" r="2.6" fill="#E8C878"/>
+        <path d="M20 1.5v5M20 33.5v5M1.5 20h5M33.5 20h5" stroke="#C8A96E" stroke-width="1"/>
+      </svg>
+      <span class="mark-text"><b>WAKE UP SOULS</b><small>by Ivan Martellato</small></span>
+    </a>
+    <a class="btn" href="#candidatura">Candidati</a>
+  </div>
+</header>
+
+<main id="inizio">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow" style="opacity:.9;text-transform:none;letter-spacing:0;font-size:.95rem;margin-bottom:.9rem">Da Marco: a Phuket ci sono anch'io, con il lavoro sull'identità. Qui sotto il mio amico Ivan ti racconta il suo ritiro.</p>
+      <p class="eyebrow">Wake Up Souls 2027 · Phuket, Thailandia</p>
+      <h1>Ricordati<br>chi sei.</h1>
+      <p class="lead">Sei giorni a Phuket per rimettere in ordine corpo, mente e anima. Metà del tempo sul corpo: palestra con me, alimentazione, integrazione, routine, bagno nel ghiaccio guidato, un seminario intero sui peptidi. L'altra metà dentro, con la Luna piena in Leone sopra la testa. Ci si entra solo con una candidatura.</p>
+      <ul class="facts">
+        <li>22-27 gennaio 2027</li>
+        <li>15 posti</li>
+        <li>Tutto incluso, volo compreso</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="btn" href="#candidatura">Candidati</a>
+        <a class="btn btn-ghost" href="#2026">Com'è andata nel 2026</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trailer" id="trailer">
+    <div class="wrap">
+      <p class="eyebrow">Wake Up Souls 2026 · in un minuto</p>
+      <h2>Ascolta chi c'era.</h2>
+      <figure class="day trailer-fig"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/trailer.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/trailer.jpg" playsinline preload="none" aria-label="Trailer di Wake Up Souls: parlano i partecipanti del 2026"></video><button class="vplay" type="button" aria-label="Guarda il trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">1:02</span></div></figure>
+      <div class="hero-ctas" style="justify-content:center"><a class="btn" href="#candidatura">Candidati</a></div>
+    </div>
+  </section>
+
+  <section class="letter">
+    <div class="wrap narrow">
+      <p class="open">Allora.</p>
+      <p>A gennaio tutti ripartono uguali. La dieta dopo le feste, i buoni propositi, la palestra per tre settimane. Stesso film, stesso finale.</p>
+      <p>Il sistema ti vuole stanco, infiammato e distratto. Così compri quello che ti dicono, credi a quello che ti dicono e vivi dove ti dicono.</p>
+      <p>Io a gennaio esco dalla caverna. Esco dall'Italia, dalla routine, dal telefono. E quest'anno ti porto con me.</p>
+      <p>Sei giorni per rimettere in ordine tutto. Il corpo, perché è la porta. Le ferite, perché finché non le guardi decidono loro al posto tuo. E l'anima, che sa già chi sei e aspetta solo che tu te ne ricordi.</p>
+      <p>Lo so, detto così sembra la solita roba da retreat. Quella dove fai yoga, mangi vegano, ti emozioni il sabato e il lunedì dopo sei esattamente dove eri prima.</p>
+      <p>Qui funziona al contrario. Prima ti spiego cosa succede nel tuo corpo mentre respiri, mangi, dormi. Poi andiamo dentro. E alla fine torni a casa con qualcosa da fare, ogni giorno, perché se fai l'esperienza e poi non agisci, ok, hai fatto una bella vacanza. Tutto qui.</p>
+      <blockquote class="quote">
+        «Il vero risveglio non consiste nel diventare qualcun altro. Consiste nel ricordarti chi sei.»
+        <cite>Ivan Martellato</cite>
+      </blockquote>
+      <div class="cta-block">
+        <a class="btn" href="#candidatura">Candidati</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sky" id="cielo">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap narrow" style="position:relative">
+      <div class="moon" aria-hidden="true"></div>
+      <p class="eyebrow" style="text-align:center">Perché proprio il 22 gennaio</p>
+      <h2 style="text-align:center">Le date le ho scelte guardando il cielo.</h2>
+      <p>L'inizio di qualcosa contiene già tutto il percorso. Iniziare l'anno sotto un cielo diverso non è un dettaglio.</p>
+      <dl class="sky-data">
+        <div><dt>Luna piena</dt><dd>22 gennaio 2027</dd></div>
+        <div><dt>Ora di Phuket</dt><dd>19:17</dd></div>
+        <div><dt>Posizione</dt><dd>Luna a 2° Leone, Sole a 2° Acquario</dd></div>
+      </dl>
+      <p>Il Sole è appena entrato in Acquario: il gruppo, la libertà, chi esce dagli schemi. Di fronte, la Luna si riempie in Leone, il segno del cuore e dell'identità, quello che ti chiede di farti vedere per quello che sei e di sentire quanto vali senza chiedere il permesso a nessuno.</p>
+      <p>La Luna piena illumina quello che di solito resta al buio, e mette in evidenza la polarità Leone-Acquario: trovare l'equilibrio tra il tuo fuoco individuale e il contributo che porti alla collettività. Chi sei tu, da solo, e cosa dai quando sei in mezzo agli altri.</p>
+      <p>È esattamente il lavoro di quei sei giorni. Ognuno il suo percorso, la sua carta astrale, le sue ombre, ma nello stesso posto e nello stesso momento. <strong>Tutti individualmente insieme.</strong></p>
+    </div>
+  </section>
+
+  <div class="band band-cerchio" role="img" aria-label="Il gruppo di Wake Up Souls 2026 seduto in cerchio sulla spiaggia, mani unite verso l'alto">
+    <div class="wrap">
+      <p>Sei giorni fuori dalla caverna.<br>Fuori dall'Italia, dalla routine, dal telefono.</p>
+      <span class="cap">Wake Up Souls 2026 · il cerchio in spiaggia</span>
+    </div>
+  </div>
+
+  <section id="programma">
+    <div class="wrap">
+      <div class="narrow" style="max-width:760px;margin-left:0">
+        <p class="eyebrow">Cosa succede in quei sei giorni</p>
+        <h2>Metà corpo, metà anima. Nella stessa stanza.</h2>
+        <div class="y2026">
+          <p>Nel 2026 c'era di tutto, come piace a me. Il corpo: alimentazione, integrazione, routine, allenamento in spiaggia, il bagno nel ghiaccio, un seminario intero sul corpo e sui peptidi, con un manuale per ognuno. E l'anima: meditazione, rebirthing, le dinamiche di Osho, il suono, le carte astrali, la cerimonia del rapè. L'ultimo giorno eravamo tutti in catamarano.</p>
+          <p><strong>Quest'anno lo rifacciamo, più completo.</strong> Il programma giorno per giorno te lo racconto in chiamata. Intanto ecco su cosa lavoriamo.</p>
+        </div>
+      </div>
+
+      <div class="half-head">
+        <span class="cap">Prima metà</span>
+        <h3>Il corpo. Il biohacking, spiegato semplice.</h3>
+        <p>Per me biohacking non vuol dire gadget. Vuol dire usare quello che sai della biologia per stare meglio ogni giorno: cosa mangi, quando dormi, quanta luce prendi, come respiri, come ti muovi. Ti spiego il meccanismo, lo provi sulla tua pelle, e quello che funziona te lo porti a casa.</p>
+      </div>
+      <div class="pair">
+        <figure class="photo">
+          <img src="https://ivanmartellato.com/wakeupsouls/img/wus-ghiaccio.jpg" alt="Un partecipante con gli occhiali immerso nel bagno di ghiaccio, mentre chi lo guida gli tiene le mani vicino alla testa" loading="lazy" width="720" height="1280">
+          <figcaption class="cap">Il bagno nel ghiaccio, guidato · 2026</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="https://ivanmartellato.com/wakeupsouls/img/wus-lezione.jpg" alt="Una lezione alla lavagna nella sala, con i partecipanti seduti davanti" loading="lazy" width="933" height="1400">
+          <figcaption class="cap">Le lezioni alla lavagna · 2026</figcaption>
+        </figure>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <span class="num">I · L'alimentazione</span>
+          <h3>Mangi come mangio io</h3>
+          <p>Cibo vero, scelto per stare lucidi e in forma. Ti spiego cosa metti nel piatto, quando, e cosa succede nel corpo dopo. A Phuket lo vivi a ogni pasto, e a casa riparti con il tuo protocollo nutrizionale personale.</p>
+        </article>
+        <article class="card">
+          <span class="num">II · L'integrazione</span>
+          <h3>Cosa ha senso prendere, e quando</h3>
+          <p>Integratori presi a caso, no. Ti spiego come ragiono io: quale integratore, per quale scopo, in quale momento della giornata. Informazione per scegliere con la tua testa e con il tuo medico.</p>
+        </article>
+        <article class="card">
+          <span class="num">III · I peptidi</span>
+          <h3>Un seminario intero, per studiare</h3>
+          <p>Come l'anno scorso, c'è un seminario dedicato ai peptidi: cosa sono, quali vengono studiati e per cosa, cosa dice la ricerca, cosa valutare. È un momento di studio, per farti un'idea tua. Nessuna promessa sulla salute.</p>
+        </article>
+        <article class="card">
+          <span class="num">IV · La routine</span>
+          <h3>La giornata che rimette in orario il corpo</h3>
+          <p>Luce, ritmo circadiano, sonno, movimento. Le piccole cose della giornata che rimettono in orario il corpo. È la routine che seguo io ogni giorno: a Phuket la fai con me, poi te la porti a casa.</p>
+        </article>
+        <article class="card">
+          <span class="num">V · La palestra</span>
+          <h3>Ti alleni con me. E ti svolto l'allenamento.</h3>
+          <p>Vengo dal bodybuilding. In palestra ti alleni al mio fianco: tecnica, carichi, recupero, spiegati semplice. Conta come ti alleni, non quante ore ci passi. Poi ci muoviamo anche in spiaggia, ognuno al suo livello, e ti porti a casa un allenamento che sta dentro la tua giornata.</p>
+        </article>
+        <article class="card">
+          <span class="num">VI · Il freddo e il respiro</span>
+          <h3>Il bagno nel ghiaccio, guidato</h3>
+          <p>Prima il respiro, poi il ghiaccio. Entri piano, con qualcuno accanto che ti guida e ti tiene il tempo. È uno stress piccolo e scelto: impari a restare calmo mentre il corpo vorrebbe scappare.</p>
+          <p class="safe">Graduale, ognuno ai suoi limiti, mai obbligatorio. Le respirazioni intense si fanno a terra, mai in acqua.</p>
+        </article>
+      </div>
+
+      <div class="half-head">
+        <span class="cap">Seconda metà</span>
+        <h3>La mente e l'anima.</h3>
+        <p>Quando il corpo è in ordine, andare dentro diventa più facile. Qui lavoriamo su quello che il corpo da solo non sistema.</p>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <span class="num">VII · Il cielo</span>
+          <h3>La tua carta astrale, dentro il cielo di gennaio</h3>
+          <p>L'astrologia, per come la uso io, è uno dei modi per ascoltare cosa chiede la tua anima. Partiamo dal momento esatto in cui sei nato e lo mettiamo davanti a quella Luna piena. La lettura completa della tua carta la facciamo io e te, uno a uno.</p>
+        </article>
+        <article class="card">
+          <span class="num">VIII · Il lavoro sull'ombra</span>
+          <h3>Le cose che decidono al posto tuo</h3>
+          <p>Paura, vergogna, attaccamento, vecchie ferite. Con Federica il sistema familiare, l'inconscio e la tua lettura archetipica. Con Marco l'identità: quella parte di te che fissa il livello oltre il quale non ti permetti di andare.</p>
+        </article>
+        <article class="card">
+          <span class="num">IX · Il respiro e il suono</span>
+          <h3>Pratiche che partono dal corpo e ti portano dentro</h3>
+          <p>Meditazione, rebirthing, le meditazioni dinamiche di Osho, il lavoro sui chakra, le campane e il gong. Si comincia dal fiato e dal movimento, e a un certo punto ti accorgi che stai guardando dentro. Ogni giorno, con me, Federica e Marco.</p>
+        </article>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <article class="card">
+          <span class="num">X · Le cerimonie</span>
+          <h3>Il rapè e le piante medicina</h3>
+          <p>C'è la meditazione con il rapè, come nella prima edizione, e ci sono le cerimonie con le piante medicina. Sono rituali: ci si ferma, ci si centra, si porta l'attenzione dentro. Ognuno partecipa per scelta, al suo ritmo. Se la vita la vivi come un rituale, ogni momento diventa sacro.</p>
+        </article>
+        <article class="card">
+          <span class="num">XI · Il mare</span>
+          <h3>Una giornata in catamarano, con la meditazione</h3>
+          <p>Come nel 2026, c'è una giornata intera in catamarano in mezzo alle isole del mare delle Andamane. Si medita sull'acqua, si nuota, si sta insieme. Viaggio in mare e viaggio dentro.</p>
+        </article>
+        <article class="card">
+          <span class="num">XII · Il gruppo</span>
+          <h3>Quindici persone che vibrano come te</h3>
+          <p>Un lavoro che di solito si fa da soli, ognuno nel suo angolo, fatto in pochi nello stesso posto. Io non voglio godermi la Thailandia da solo. Voglio una comunità che vibra.</p>
+        </article>
+      </div>
+      <div class="cta-block">
+        <a class="btn" href="#candidatura">Candidati</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="band band-andamane" role="img" aria-label="Il mare delle Andamane al tramonto, con le barche dei pescatori sulla riva e le colline verdi sullo sfondo">
+    <div class="wrap">
+      <p>In Italia, a gennaio, alle cinque è già buio.<br>Qui il sole scende sul mare.</p>
+      <span class="cap">Phuket · mare delle Andamane · gennaio 2026</span>
+    </div>
+  </div>
+
+  <section id="posto">
+    <div class="wrap">
+      <div class="place">
+        <div>
+          <p class="eyebrow">Il posto</p>
+          <h2>Phuket, il mare delle Andamane, una sala senza muri.</h2>
+          <p>Phuket non è solo la cartolina che conosci. Appena esci dal giro dei turisti trovi un'isola verde, l'acqua calda, le colline che scendono sul mare.</p>
+          <p>Le pratiche le facciamo in una sala aperta, in mezzo alle piante. Il tetto di legno, il pavimento fresco sotto i piedi, il gong in fondo. Senti l'aria, la luce che cambia, gli uccelli.</p>
+          <p>Quando serve ci spostiamo in spiaggia: il respiro, il movimento, la cerimonia con i piedi nella sabbia. Nel 2026 l'ultimo giorno l'abbiamo passato in catamarano, in mezzo alle isole.</p>
+          <p>Il posto conta. Il corpo capisce prima della testa dove si trova. E quando si sente al sicuro, si apre.</p>
+        </div>
+        <figure class="photo">
+          <img src="https://ivanmartellato.com/wakeupsouls/img/wus-ciotola.jpg" alt="Una campana tibetana con i batacchi appoggiata sulla sabbia, prima di una pratica in spiaggia" loading="lazy" width="933" height="1400">
+          <figcaption class="cap">La campana sulla sabbia, prima della pratica</figcaption>
+        </figure>
+      </div>
+
+      <div class="asia">
+        <p class="eyebrow">L'energia dell'Asia</p>
+        <h3>Qui il tempo scorre in un altro modo.</h3>
+        <p class="narrow" style="margin-left:0">Te ne accorgi dopo un giorno. Rallenti senza sforzo, e quello che a casa ti sembrava urgente diventa piccolo.</p>
+        <ul class="asia-list">
+          <li><h4>Un altro ritmo</h4><p>Ci si sveglia con il sole e si va a dormire presto. Il corpo si rimette in orario da solo. Il ritmo circadiano lo impari vivendolo, non leggendolo.</p></li>
+          <li><h4>I templi e le offerte</h4><p>Qui la spiritualità non sta nei libri. Sta nei piccoli altari davanti alle case e ai negozi, nei fiori e nell'incenso di ogni mattina, nel grande Buddha bianco che guarda l'isola dalla collina. Vivere la giornata come un rituale, qui, è normale.</p></li>
+          <li><h4>La luce</h4><p>Luce piena dal mattino presto. Esci, la guardi, e il corpo capisce che è giorno. È la prima cosa che ti insegno, e la più semplice da portare a casa.</p></li>
+          <li><h4>Il caldo di gennaio</h4><p>In Italia è inverno: cappotto, cielo grigio, giornate corte. Qui cammini scalzo e fai il bagno al tramonto. Sei giorni d'estate nel mezzo dell'inverno.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="life" id="tavola">
+    <div class="wrap">
+      <div class="life-grid">
+        <div class="life-block">
+          <p class="eyebrow">A tavola</p>
+          <h3>Si mangia per stare lucidi.</h3>
+          <p>La cucina thailandese è una delle più fresche che esistano. Erbe, lime, zenzero, citronella, peperoncino, pesce, verdure appena tagliate. Sapori veri, niente di pesante.</p>
+          <ul class="fruit" aria-label="La frutta di gennaio">
+            <li>Mango</li><li>Papaya</li><li>Ananas</li><li>Cocco</li><li>Frutto della passione</li>
+          </ul>
+          <p>E la frutta tropicale, quella che da noi arriva acerba e qui la mangi matura.</p>
+          <p>Cibo pulito, pensato per stare leggeri e lucidi durante le pratiche.</p>
+          <p>Niente diete punitive, niente menù vegano per principio. Mangi come mangio io, e a ogni pasto ti spiego il perché, così a casa lo continui.</p>
+          <p>Soprattutto, si mangia insieme. Alla stessa tavola, senza telefono. Lì nascono metà delle conversazioni che ti porti a casa.</p>
+          <p class="cta-note" style="text-align:left">Intolleranze o esigenze particolari? Me le racconti in videochiamata.</p>
+        </div>
+        <div class="life-block">
+          <p class="eyebrow">Il gruppo</p>
+          <h3>Quindici persone. Stesso posto, stesso momento.</h3>
+          <p>Al massimo quindici. Abbastanza per sentire la forza di un gruppo, pochi per conoscersi tutti per nome.</p>
+          <p>Ognuno fa il suo percorso: la sua carta, le sue ombre, le sue domande. Ma lo fa accanto ad altri che stanno facendo lo stesso. Quello che da solo rimandi, in cerchio lo guardi.</p>
+          <p>E il gruppo non finisce all'aeroporto. I legami che nascono in quei sei giorni restano: ti porti a casa persone, non solo ricordi.</p>
+          <figure class="photo">
+            <img src="https://ivanmartellato.com/wakeupsouls/img/wus-legami.jpg" alt="Due partecipanti abbracciate sul catamarano, con il mare alle spalle, in bianco e nero" loading="lazy" width="933" height="1400">
+            <figcaption class="cap">Wake Up Souls 2026 · l'ultimo giorno, in catamarano</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="2026">
+    <div class="wrap">
+      <div class="narrow" style="max-width:760px;margin-left:0">
+        <p class="eyebrow">Wake Up Souls 2026</p>
+        <h2>L'anno scorso i posti sono finiti mesi prima.</h2>
+        <p>A gennaio 2026 ho fatto una cosa che non avevo mai fatto: ho portato un gruppo di persone a Phuket. Sold out. Il retreat si è chiuso il 19 gennaio, tutti insieme su un catamarano.</p>
+        <p>Ero convinto di fare una cosa sola. È diventata un'altra. Guarda tu.</p>
+      </div>
+
+      <div class="proof">
+        <div class="gallery" aria-label="Foto di Wake Up Souls 2026">
+          <figure><img src="https://ivanmartellato.com/wakeupsouls/img/wus-rape.jpg" alt="La cerimonia del rapè sulla spiaggia" loading="lazy" width="933" height="1400"><figcaption>La cerimonia</figcaption></figure>
+          <figure><img src="https://ivanmartellato.com/wakeupsouls/img/wus-campana.jpg" alt="Una campana tibetana appoggiata sul petto durante il sound healing" loading="lazy" width="933" height="1400"><figcaption>Il suono</figcaption></figure>
+          <figure><img src="https://ivanmartellato.com/wakeupsouls/img/wus-movimento.jpg" alt="Due partecipanti in allungamento sulla sabbia durante una sessione di movimento in spiaggia" loading="lazy" width="933" height="1400"><figcaption>Il movimento</figcaption></figure>
+          <figure><img src="https://ivanmartellato.com/wakeupsouls/img/wus-abbraccio.jpg" alt="Un abbraccio a fine giornata" loading="lazy" width="933" height="1400"><figcaption>Il gruppo</figcaption></figure>
+        </div>
+        <div class="proof-img" role="img" aria-label="L'ultimo giorno di Wake Up Souls 2026, in catamarano">
+          <div><p>Viaggio in mare<br>e viaggio dentro.</p><span class="cap" style="margin-top:10px">19 gennaio 2026 · il catamarano</span></div>
+        </div>
+      </div>
+
+      <div class="videos-head">
+        <p class="eyebrow">Wake Up Souls 2026 · i video</p>
+        <h3>Giorno per giorno.</h3>
+        <p>Meno di un minuto a giorno, girati sul posto. Premi play: l'audio parte solo se lo scegli tu.</p>
+      </div>
+      <div class="days">
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/day1.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/day1.jpg" playsinline preload="none" aria-label="Video del giorno 1 di Wake Up Souls 2026"></video><button class="vplay" type="button" aria-label="Guarda il video del giorno 1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:43</span></div><figcaption><span class="cap">Giorno 1</span><span>Movimento, respiro, il primo rapè</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/day3.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/day3.jpg" playsinline preload="none" aria-label="Video del giorno 3 di Wake Up Souls 2026"></video><button class="vplay" type="button" aria-label="Guarda il video del giorno 3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:51</span></div><figcaption><span class="cap">Giorno 3</span><span>Il bagno nel ghiaccio e le lezioni</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/day4.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/day4.jpg" playsinline preload="none" aria-label="Video del giorno 4 di Wake Up Souls 2026"></video><button class="vplay" type="button" aria-label="Guarda il video del giorno 4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:55</span></div><figcaption><span class="cap">Giorno 4</span><span>Il suono, poi gli abbracci</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/day5.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/day5.jpg" playsinline preload="none" aria-label="Video del giorno 5 di Wake Up Souls 2026"></video><button class="vplay" type="button" aria-label="Guarda il video del giorno 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:46</span></div><figcaption><span class="cap">Giorno 5</span><span>Il grande Buddha, la spiaggia, il quaderno</span></figcaption></figure>
+      </div>
+      <div class="videos-head">
+        <p class="eyebrow">Wake Up Souls 2026 · le testimonianze</p>
+        <h3>Lo raccontano loro.</h3>
+        <p>Le loro parole, così come le hanno dette in Thailandia, a fine retreat.</p>
+      </div>
+      <div class="days">
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim1.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim1.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Un partecipante"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Un partecipante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">1:08</span></div><figcaption><span class="cap">Un partecipante</span><span>«L'esperienza più bella della mia vita.»</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim2.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim2.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Una partecipante"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Una partecipante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">1:02</span></div><figcaption><span class="cap">Una partecipante</span><span>«Mi ha aperto il cuore.»</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim3.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim3.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Un partecipante"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Un partecipante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:42</span></div><figcaption><span class="cap">Un partecipante</span><span>«Ho capito che questa fiducia c'era già in me.»</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim4.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim4.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Un partecipante"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Un partecipante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:36</span></div><figcaption><span class="cap">Un partecipante</span><span>«Ho scoperto un mondo oltre a questo.»</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim5.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim5.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Un partecipante"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Un partecipante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">0:29</span></div><figcaption><span class="cap">Un partecipante</span><span>«Mi ha arricchito in modo profondo.»</span></figcaption></figure>
+        <figure class="day"><div class="vwrap"><video src="https://ivanmartellato.com/wakeupsouls/video/testim6.mp4" poster="https://ivanmartellato.com/wakeupsouls/video/testim6.jpg" playsinline preload="none" aria-label="Testimonianza di Wake Up Souls 2026: Marco"></video><button class="vplay" type="button" aria-label="Guarda la testimonianza: Marco"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button><span class="vlen">1:11</span></div><figcaption><span class="cap">Marco</span><span>«Ancora più luce sulla mia strada.»</span></figcaption></figure>
+      </div>
+      <div class="cta-block">
+        <a class="btn" href="#candidatura">Candidati per il 2027</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <p class="eyebrow">Chi ti guida</p>
+      <h2>Niente titoli. A nessuno di noi frega niente.</h2>
+      <div class="story narrow" style="max-width:760px;margin-left:0">
+        <p>Qualche anno fa ero a Bali da quattro, cinque mesi. Alle 4 del mattino, ora mia, mi collego a una diretta per parlare di fisiologia e di parte spirituale insieme. Mi tagliano, davanti a migliaia di persone. Nei giorni dopo mi scrivono «sei un criminale», e anche di peggio.</p>
+        <p>Mi sono ritirato e mi sono detto una frase sola: ok, adesso devo capire chi cazzo sono.</p>
+        <p>Ho capito che non sono il titolo, l'albo, il profilo Instagram, quello che pensano di me. E che corpo e anima non sono due cose separate: se tieni dentro la vergogna, prima o poi il corpo te la fa sentire. Se lavori sul corpo, a volte si sblocca qualcosa che col corpo non c'entrava niente.</p>
+        <p>Da lì è nato tutto questo. Per questo qui sotto non trovi attestati: trovi tre persone che vivono la vita che raccontano.</p>
+      </div>
+      <div class="guides">
+        <div class="guide">
+          <figure class="guide-photo"><img src="https://ivanmartellato.com/wakeupsouls/img/wus-ivan.jpg" alt="Ivan Martellato sul catamarano durante Wake Up Souls 2026, lo sguardo verso il mare" loading="lazy" width="720" height="900"></figure>
+          <h3>Ivan</h3>
+          <p class="role">Il corpo e il cielo</p>
+          <p>Vivo tra Phuket e Bali e vengo dal mondo del corpo: bodybuilding, nutrizione, integrazione, peptidi. Parto sempre da lì: ti spiego cosa succede mentre respiri, mangi, dormi, e solo dopo andiamo dentro. Poi ti porto dove il corpo da solo non arriva: la tua carta astrale, il rapè, i rituali di ogni giorno.</p>
+          <p>Tutto quello che ti racconto l'ho provato prima su di me. A gennaio 2026 ho guidato la prima edizione di Wake Up Souls, qui a Phuket. E ho imparato una cosa: l'esperienza da sola non basta, conta quello che fai il lunedì dopo. Per questo ogni giorno ti lascio qualcosa di semplice da portarti a casa.</p>
+          <p class="gq">«Il vero risveglio non consiste nel diventare qualcun altro. Consiste nel ricordarti chi sei.»</p>
+        </div>
+        <div class="guide">
+          <figure class="guide-photo"><img src="https://ivanmartellato.com/wakeupsouls/img/wus-federica.jpg" alt="Federica Orzati sorridente, seduta davanti al gong nella sala delle pratiche durante Wake Up Souls 2026" loading="lazy" width="720" height="900"></figure>
+          <h3>Federica</h3>
+          <p class="role">Il sistema familiare e l'inconscio</p>
+          <p>Ha studiato psicologia clinica a Firenze, ma la sua strada vera l'ha trovata viaggiando: culture lontane, tradizioni native, pratiche spirituali. Da lì un modo di lavorare che tiene insieme lo sguardo della psicologia e quello dello spirito, con le persone e con i gruppi.</p>
+          <p>Nel ritiro guida le costellazioni familiari: un modo visivo e intuitivo per guardare quello che ti porti dietro dalla tua famiglia senza saperlo. I legami, le ferite che passano di generazione in generazione e decidono al posto tuo. E a ognuno dedica la sua lettura archetipica.</p>
+          <p class="gq">«Sono qui per ricordarti chi sei, veramente.»</p>
+        </div>
+        <div class="guide">
+          <figure class="guide-photo"><img src="https://ivanmartellato.com/wakeupsouls/img/wus-marco.jpg" alt="Marco Gentile durante Wake Up Souls 2026, nella sala delle pratiche" loading="lazy" width="720" height="900"></figure>
+          <h3>Marco</h3>
+          <p class="role">L'identità</p>
+          <p>Marco Gentile, papà e imprenditore, ha fondato Reality Architecture. Lavora su quello che sta sotto a tutto il resto: l'identità, l'idea che hai di te e che decide fin dove ti permetti di arrivare. Nelle relazioni, nel corpo, nel lavoro, nella libertà di vivere come desideri.</p>
+          <p>Al centro del suo lavoro ci sono due parole: identità e contenitore, cioè la capacità interiore di accogliere quello che desideri senza tornare ogni volta al punto di partenza. Lo fa ogni giorno prima su di sé. Nel libro «Lo Specchio» racconta il punto in cui nasce il nodo e come scioglierlo. Il libro e il suo corso «La Mappa» sono inclusi nel ritiro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="included" id="incluso">
+    <div class="wrap narrow" style="max-width:820px">
+      <div style="text-align:center">
+        <p class="eyebrow">Cosa porti a casa · tutto incluso</p>
+        <h2>Tu porti te stesso. Al resto ci pensiamo noi.</h2>
+        <p class="lead">Dal volo all'ultima cerimonia c'è tutto. E torni a casa con un lavoro fatto su misura per te, non con un bel ricordo e basta.</p>
+      </div>
+
+      <div class="stack">
+        <div class="sblock">
+          <p class="sblock-head"><span>I</span>Il viaggio</p>
+          <ul class="inc-list">
+            <li><span>✈</span>Volo</li>
+            <li><span>☾</span>Vitto</li>
+            <li><span>⌂</span>Alloggio</li>
+            <li><span>☉</span>Esperienze</li>
+            <li><span>✦</span>Pratiche</li>
+            <li><span>△</span>Cerimonie</li>
+          </ul>
+          <p class="sblock-foot">Pratiche ogni giorno con me, Federica e Marco. <b class="inc">Incluso</b></p>
+        </div>
+
+        <div class="sblock">
+          <p class="sblock-head"><span>II</span>Il tuo corpo</p>
+          <ul class="sitems">
+            <li><div class="sname"><strong>Allenamenti in palestra con me</strong><span>Vengo dal bodybuilding. Ti alleni al mio fianco, ti sistemo la tecnica e ti svolto il modo di allenarti.</span></div><div class="sval"><b class="inc">Incluso</b></div></li>
+            <li><div class="sname"><strong>Il tuo protocollo nutrizionale personale</strong><span>Per sei giorni mangi come mangio io. Poi riparti con un piano fatto su di te: cosa mangiare, quando, cosa ha senso integrare.</span></div><div class="sval"><b class="inc">Incluso</b></div></li>
+          </ul>
+        </div>
+
+        <div class="sblock">
+          <p class="sblock-head"><span>III</span>Le letture, solo per te</p>
+          <ul class="sitems">
+            <li><div class="sname"><strong>La tua carta astrale, letta da me</strong><span>Uno a uno, dal momento esatto in cui sei nato, dentro il cielo di gennaio 2027.</span></div><div class="sval"><s>500 €</s><b class="inc">Incluso</b></div></li>
+            <li><div class="sname"><strong>La tua lettura archetipica con Federica</strong><span>Gli archetipi che muovono le tue scelte, guardati in faccia.</span></div><div class="sval"><b class="inc">Incluso</b></div></li>
+          </ul>
+        </div>
+
+        <div class="sblock">
+          <p class="sblock-head"><span>IV</span>Per continuare a casa</p>
+          <ul class="sitems">
+            <li><div class="sname"><strong>La guida di Wake Up Souls</strong><span>Le pratiche e la routine dei sei giorni, da riprendere ogni mattina.</span></div><div class="sval"><b class="inc">Incluso</b></div></li>
+            <li><div class="sname"><strong>«Lo Specchio», il libro di Marco</strong><span>Il punto in cui nasce il nodo che ti tiene fermo, e come scioglierlo.</span></div><div class="sval"><s>47 €</s><b class="inc">Incluso</b></div></li>
+            <li><div class="sname"><strong>«La Mappa», il corso di Marco</strong><span>Il lavoro sull'identità passo dopo passo, per restare al nuovo livello anche dopo il rientro.</span></div><div class="sval"><s>497 €</s><b class="inc">Incluso</b></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="dates-line"><span>Phuket, Thailandia</span><span>Retreat dal 22 al 27 gennaio 2027</span><span>15 posti</span></p>
+      <p class="stack-note">L'investimento te lo dico in videochiamata, dopo la candidatura.</p>
+      <div class="cta-block" style="margin-top:28px">
+        <a class="btn" href="#candidatura">Candidati</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="per-chi" style="background:var(--night-2)">
+    <div class="wrap">
+      <p class="eyebrow">Per chi è, e per chi no</p>
+      <h2>Io non convinco nessuno.</h2>
+      <div class="two">
+        <div class="who">
+          <h3>È per te se</h3>
+          <ul>
+            <li>hai già i risultati, nel lavoro e nella vita, e ogni gennaio ti ritrovi a rifare lo stesso anno;</li>
+            <li>tieni al tuo corpo: ti alleni, mangi con attenzione, ti interessano integrazione e longevità, e vuoi capire cosa ha senso davvero;</li>
+            <li>hai provato diete, corsi, libri, meditazioni, e senti che manca ancora un pezzo. Quando pensi di averle provate tutte, sei solo all'inizio del percorso;</li>
+            <li>ti interessa il come: cosa succede nel corpo, perché una pratica funziona, cosa dice il tuo cielo;</li>
+            <li>dopo l'esperienza vuoi agire, cambiare le tue giornate, scegliere l'anno che vuoi;</li>
+            <li>hai voglia di farlo con poche persone che vanno nella tua stessa direzione.</li>
+          </ul>
+        </div>
+        <div class="who no">
+          <h3>Non è per te se</h3>
+          <ul>
+            <li>cerchi un guru che ti dica cosa credere. Se mi consideri un guru, metti in dubbio quello che dico;</li>
+            <li>cerchi una cura. Questo non è un trattamento sanitario e non sostituisce il tuo medico;</li>
+            <li>vuoi una vacanza con un po' di yoga e il menù vegano;</li>
+            <li>fai l'esperienza e poi torni a casa a fare esattamente come prima;</li>
+            <li>hai bisogno che qualcuno ti convinca a venire.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bonus" style="padding-top:0">
+    <div class="wrap narrow" style="max-width:820px">
+      <div class="bonus">
+        <span class="tag">BONUS · PAGAMENTO INTERO</span>
+        <h3 style="font-style:italic">Una sessione privata con me. Solo tu e io.</h3>
+        <p>Se scegli di pagare tutto in un'unica soluzione entro il 4 dicembre, prima di partire ci vediamo uno a uno. Guardiamo il tuo corpo, la tua routine e la tua carta, così a Phuket arrivi già con il lavoro avviato.</p>
+        <p style="margin:0">Preferisci dividere? Va benissimo: blocchi il posto con un acconto e il resto lo paghi a rate, entro il 10 gennaio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seats" style="background:var(--night-2)">
+    <div class="wrap narrow">
+      <p class="eyebrow">I posti</p>
+      <div class="big-num">15</div>
+      <div class="seat-row" aria-hidden="true">
+        <span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span>
+        <span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span>
+        <span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span><span class="seat"></span>
+      </div>
+      <p class="lead">Quindici persone. Non per fare i fighi: voglio seguire ognuno, guardare in faccia ognuno, sapere come si chiama la tua ferita e cosa vuoi fare quando smette di decidere per te.</p>
+      <p>L'anno scorso sono finiti mesi prima. Quando finiscono, finiscono, e chi arriva dopo va in lista d'attesa.</p>
+      <div class="cta-block" style="margin-top:30px">
+        <a class="btn" href="#candidatura">Candidati</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply" id="candidatura">
+    <div class="wrap">
+      <div class="narrow" style="text-align:center;max-width:720px">
+        <p class="eyebrow">La candidatura</p>
+        <h2>Non si compra con un clic. Ci si candida.</h2>
+        <p class="lead" style="margin-bottom:44px">Ci vogliono pochi minuti. Rispondi sinceramente: più mi dici, più la chiamata ti serve.</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>Ti candidi</strong><p>Compili il modulo qui sotto, con i tuoi dati di nascita.</p></li>
+        <li><strong>Ci sentiamo in videochiamata</strong><p>Venti minuti. Ti faccio una mini-lettura del tuo cielo di gennaio e ti racconto tutto il resto, investimento compreso.</p></li>
+        <li><strong>Ricevi l'esito</strong><p>Se siamo allineati, sei dentro. Se non è il momento, te lo dico chiaro.</p></li>
+      </ol>
+
+      <div class="form-shell">
+        <div id="wus-esterno" style="text-align:center;padding:1.5rem 0"><a id="wus-esterno-btn" class="btn" href="https://ivanmartellato.com/wakeupsouls/#candidatura">Apri il modulo di candidatura</a><p style="margin-top:.8rem;font-size:.9rem;opacity:.8">Si apre il modulo ufficiale di Wake Up Souls: pochi minuti.</p></div>
+<form id="wus-form" action="#" method="post" novalidate>
+<input type="hidden" name="utm_source"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="pagina" value="realityarchitecture.it/wakeupsouls">
+
+          <fieldset>
+            <legend>Chi sei</legend>
+            <div class="row">
+              <div class="field">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" autocomplete="given-name" required>
+                <span class="err">Scrivi il tuo nome.</span>
+              </div>
+              <div class="field">
+                <label for="cognome">Cognome</label>
+                <input type="text" id="cognome" name="cognome" autocomplete="family-name" required>
+                <span class="err">Scrivi il tuo cognome.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+                <span class="err">Serve un'email valida.</span>
+              </div>
+              <div class="field">
+                <label for="whatsapp">WhatsApp</label>
+                <div class="tel-riga">
+                  <div class="prefisso">
+                    <span id="prefisso-vis" aria-hidden="true">+39</span>
+                    <select id="prefisso" name="prefisso" aria-label="Prefisso internazionale">
+                      <option value="+39" selected>Italia +39</option>
+                    </select>
+                  </div>
+                  <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="333 123 4567" required>
+                </div>
+                <span class="err" id="err-whatsapp">Controlla il numero: scegli il prefisso e scrivi il resto, per esempio 333 1234567.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Il tuo cielo</legend>
+            <div class="birth-why">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="#C8A96E"/><circle cx="20" cy="20" r="3" fill="#E8C878"/></svg>
+              <span>Perché te li chiedo: con data, ora e luogo di nascita preparo la tua mini-lettura. Nella videochiamata ricevi un primo sguardo su cosa dice il tuo cielo di gennaio 2027.</span>
+            </div>
+            <div class="row three">
+              <div class="field">
+                <label for="data">Data di nascita</label>
+                <input type="date" id="data" name="data_nascita" required>
+                <span class="err">Inserisci la data.</span>
+              </div>
+              <div class="field">
+                <label for="ora">Ora di nascita</label>
+                <input type="time" id="ora" name="ora_nascita">
+                <span class="hint" style="margin-top:6px">Se non la sai, lasciala vuota.</span>
+              </div>
+              <div class="field">
+                <label for="luogo">Luogo di nascita</label>
+                <input type="text" id="luogo" name="luogo_nascita" placeholder="Città e provincia" required>
+                <span class="err">Inserisci il luogo.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Il tuo anno</legend>
+            <div class="field">
+              <label for="lasciare">Cosa vuoi lasciare nel 2026?</label>
+              <span class="hint">Un'abitudine, una paura, una storia che ti racconti da troppo tempo.</span>
+              <textarea id="lasciare" name="cosa_lasciare_2026" required></textarea>
+              <span class="err">Scrivi almeno una riga.</span>
+            </div>
+            <div class="field">
+              <label for="succeda">Cosa vuoi che succeda nel 2027?</label>
+              <span class="hint">Concreto. Se un desiderio vive solo se qualcuno te lo approva, non è tuo.</span>
+              <textarea id="succeda" name="cosa_succeda_2027" required></textarea>
+              <span class="err">Scrivi almeno una riga.</span>
+            </div>
+            <div class="field">
+              <label for="provato">Cosa hai già provato che non ha funzionato?</label>
+              <textarea id="provato" name="gia_provato" required></textarea>
+              <span class="err">Scrivi almeno una riga.</span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>La tua vita adesso</legend>
+            <div class="field">
+              <label for="lavoro">Di cosa ti occupi?</label>
+              <select id="lavoro" name="lavoro" required>
+                <option value="" selected disabled>Scegli</option>
+                <option>Imprenditore</option>
+                <option>Libero professionista</option>
+                <option>Dipendente</option>
+                <option>Altro</option>
+              </select>
+              <span class="err">Scegli un'opzione.</span>
+            </div>
+            <div class="field">
+              <label for="situazione">Raccontami in due righe la tua situazione</label>
+              <textarea id="situazione" name="situazione" style="min-height:90px"></textarea>
+            </div>
+            <div class="field">
+              <label for="salute">Condizioni di salute che è importante conoscere</label>
+              <span class="hint">Ci servono per la tua sicurezza durante pratiche e cerimonie: patologie, farmaci che prendi, gravidanza. Se non c'è niente, scrivi «nessuna».</span>
+              <textarea id="salute" name="salute" style="min-height:90px" required></textarea>
+              <span class="err">Scrivi «nessuna» se non c'è niente da segnalare.</span>
+            </div>
+          </fieldset>
+
+          <div class="trappola" aria-hidden="true">
+            <label for="sito">Sito web</label>
+            <input type="text" id="sito" name="sito" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label class="check"><input type="checkbox" id="privacy" name="privacy" required> <span>Acconsento al trattamento dei miei dati per valutare la candidatura e a ricevere da Ivan email e messaggi WhatsApp su Wake Up Souls 2027. Ho letto l'<a href="https://ivanmartellato.com/privacy-policy/" target="_blank" rel="noopener">informativa privacy</a>.</span></label>
+            <span class="err">Serve il tuo consenso per valutare la candidatura.</span>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" id="consenso-salute" name="consenso_salute" required> <span>Acconsento al trattamento delle informazioni sulla salute che ho scritto, solo per la mia sicurezza durante il retreat.</span></label>
+            <span class="err">Serve il tuo consenso per le informazioni sulla salute.</span>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn" type="submit">Invia la candidatura</button>
+            <p class="cta-note">Nessun pagamento adesso. Prima ci parliamo.</p>
+            <p class="invio-err" id="invio-err" role="alert" hidden></p>
+          </div>
+        </form>
+
+        <div class="done" id="wus-done" role="status" aria-live="polite" tabindex="-1">
+          <div class="moon" aria-hidden="true"></div>
+          <h3>Candidatura ricevuta.</h3>
+          <p class="lead">Grazie. La leggo davvero.</p>
+          <p>Ti scriviamo per fissare la videochiamata di 20 minuti. Nel frattempo una cosa la puoi fare già da domattina: esci e guarda la luce del mattino, dieci minuti, senza occhiali da sole.</p>
+          <p class="sign" style="font-size:24px">Un forte abbraccio, Ivan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="garanzie">
+    <div class="wrap">
+      <div style="text-align:center">
+        <p class="eyebrow">Le garanzie</p>
+        <h2>Il rischio me lo prendo io.</h2>
+      </div>
+      <div class="guarantees">
+        <div class="gcard">
+          <div class="gseal">I</div>
+          <h3>Non vieni ammesso?</h3>
+          <p>Se hai versato l'acconto e la candidatura non viene accettata, ti torna tutto. Al 100%.</p>
+        </div>
+        <div class="gcard">
+          <div class="gseal">II</div>
+          <h3>Ti succede qualcosa?</h3>
+          <p>Il posto è trasferibile a un'altra persona fino a 30 giorni prima della partenza.</p>
+        </div>
+        <div class="gcard">
+          <div class="gseal">III</div>
+          <h3>Annulliamo noi?</h3>
+          <p>Se il retreat lo annulla l'organizzazione, ti rimborsiamo tutto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="domande" style="background:var(--night-2)">
+    <div class="wrap narrow" style="max-width:760px">
+      <p class="eyebrow">Domande</p>
+      <h2>Quello che mi chiedono sempre.</h2>
+      <details>
+        <summary>Quanto costa?</summary>
+        <p>L'investimento te lo dico in videochiamata, dopo la candidatura. Prima voglio capire chi sei e cosa cerchi, e tu vuoi capire se questa cosa fa per te. Ricorda che dentro c'è tutto, volo compreso.</p>
+      </details>
+      <details>
+        <summary>Il volo è incluso davvero?</summary>
+        <p>Sì. Volo, vitto, alloggio, esperienze, pratiche e cerimonie. In più la lettura della tua carta astrale, la lettura archetipica con Federica, il tuo protocollo nutrizionale, la guida, il libro e il corso di Marco. I dettagli del viaggio li vediamo insieme in chiamata.</p>
+      </details>
+      <details>
+        <summary>Quali sono le date esatte?</summary>
+        <p>Il retreat è dal 22 al 27 gennaio 2027, a Phuket, in Thailandia.</p>
+      </details>
+      <details>
+        <summary>Non so niente di astrologia o di spiritualità. Posso venire lo stesso?</summary>
+        <p>Sì. Molti arrivano dal corpo, dalla palestra, dal lavoro. Ti spiego ogni cosa partendo da quello che succede nel corpo. Ti chiedo solo di arrivare curioso e di mettere in dubbio tutto, anche me.</p>
+      </details>
+      <details>
+        <summary>Non conosco la mia ora di nascita.</summary>
+        <p>Candidati lo stesso e lascia il campo vuoto. Spesso l'ora è scritta sull'atto di nascita integrale, che si chiede al comune dove sei nato. Se la trovi, me la porti in chiamata.</p>
+      </details>
+      <details>
+        <summary>Cos'è la cerimonia del rapè?</summary>
+        <p>È una cerimonia, come nella prima edizione: un rituale per fermarsi, centrarsi e portare l'attenzione dentro. In videochiamata ti spiego come si svolge. Per questo nel modulo ti chiedo le condizioni di salute: la tua sicurezza viene prima di tutto.</p>
+      </details>
+      <details>
+        <summary>Serve essere allenati? Il ghiaccio è obbligatorio?</summary>
+        <p>No. Ognuno lavora al suo livello. Il bagno nel ghiaccio è guidato, graduale e mai obbligatorio: prima si prepara il respiro, poi si entra con qualcuno accanto. Se hai problemi di cuore o di pressione, o sei in gravidanza, scrivilo nel modulo: ne parliamo prima.</p>
+      </details>
+      <details>
+        <summary>Si parla di peptidi. Cosa vuol dire?</summary>
+        <p>Che c'è un seminario di studio e informazione, come nel 2026: cosa sono, cosa dice la ricerca, cosa ne penso io. Esci con le idee più chiare e decidi tu cosa farne, con il tuo medico. Nessuna promessa sulla salute.</p>
+      </details>
+      <details>
+        <summary>È un percorso terapeutico?</summary>
+        <p>No. Wake Up Souls non è un trattamento sanitario e non sostituisce medici, terapie o farmaci. È un'esperienza di gruppo per rimettere in ordine il modo in cui vivi.</p>
+      </details>
+      <details>
+        <summary>Posso venire con il mio partner o con un amico?</summary>
+        <p>Sì, purché vi candidiate tutti e due. Ognuno compila il suo modulo e fa la sua chiamata: ognuno ha il suo cielo e il suo percorso.</p>
+      </details>
+      <details>
+        <summary>E se poi non posso più partire?</summary>
+        <p>Fino a 30 giorni prima puoi trasferire il tuo posto a un'altra persona.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap narrow">
+      <p class="eyebrow">Ultima cosa</p>
+      <h2>Puoi rifare lo stesso anno. Oppure sceglierne un altro.</h2>
+      <p>A gennaio ripartono tutti. Tu puoi ripartire come l'anno scorso, con la stessa dieta, gli stessi propositi e lo stesso film, oppure salire su un aereo e passare sei giorni a ricordarti chi sei, sotto una Luna piena in Leone, con quattordici persone che vanno nella tua stessa direzione.</p>
+      <p>Se non è il momento, va benissimo. Io non convinco nessuno.</p>
+      <p>Se senti che è il momento, la candidatura è qui sotto. Ci vogliono pochi minuti, e la chiamata vale la pena anche solo per sentire cosa dice il tuo cielo.</p>
+      <div class="cta-block" style="text-align:left">
+        <a class="btn" href="#candidatura">Candidati adesso</a>
+        <p class="cta-note">15 posti · 22-27 gennaio 2027 · Phuket</p>
+      </div>
+      <p class="sign">Un forte abbraccio,<br>Ivan</p>
+      <p style="font-family:var(--f-mark);letter-spacing:.24em;font-size:12px;color:var(--gold)">PER ASPERA</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#inizio" aria-label="Torna su">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#C8A96E" stroke-width="1"/>
+        <circle cx="20" cy="20" r="12" stroke="#C8A96E" stroke-width="1"/>
+        <circle cx="20" cy="20" r="2.6" fill="#E8C878"/>
+        <path d="M20 1.5v5M20 33.5v5M1.5 20h5M33.5 20h5" stroke="#C8A96E" stroke-width="1"/>
+      </svg>
+      <span class="mark-text"><b>WAKE UP SOULS</b><small>by Ivan Martellato</small></span>
+    </a>
+    <p>Wake Up Souls 2027 · Phuket, Thailandia · 22-27 gennaio 2027</p>
+    <p>Wake Up Souls è un'esperienza di gruppo. Non è un trattamento sanitario e non sostituisce il parere del tuo medico. Le pratiche e le cerimonie sono proposte, mai imposte.</p>
+    <p>Foto e video: Wake Up Souls 2026, Phuket.</p>
+    <p><a href="https://ivanmartellato.com/privacy-policy/" target="_blank" rel="noopener">Informativa privacy</a> · <a href="https://ivanmartellato.com/cookie-policy/" target="_blank" rel="noopener">Cookie policy</a></p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn" href="#candidatura">Candidati</a>
+</div>
+
+<script>
+  (function () {
+    // Pulsante fisso, nascosto col modulo a schermo
+    var sticky = document.getElementById('sticky');
+    var apply = document.getElementById('candidatura');
+    var hero = document.querySelector('.hero');
+    if ('IntersectionObserver' in window && sticky && apply) {
+      var inApply = false, inHero = true;
+      var update = function () { sticky.classList.toggle('hide', inApply || inHero); };
+      new IntersectionObserver(function (e) { inApply = e[0].isIntersecting; update(); }, { threshold: 0.05 }).observe(apply);
+      new IntersectionObserver(function (e) { inHero = e[0].intersectionRatio > 0.6; update(); }, { threshold: [0, 0.6, 1] }).observe(hero);
+    }
+
+    // Video: partono al tocco, uno alla volta
+    var vids = document.querySelectorAll('.day video');
+    document.querySelectorAll('.day').forEach(function (fig) {
+      var v = fig.querySelector('video'), b = fig.querySelector('.vplay');
+      if (!v || !b) return;
+      b.addEventListener('click', function () {
+        v.controls = true;
+        var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+        v.focus();
+      });
+      v.addEventListener('play', function () {
+        fig.classList.add('playing');
+        vids.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+      });
+    });
+
+    // Contatti a Brevo, candidatura completa a candidatura.php
+    var BREVO = 'https://526f7617.sibforms.com/serve/MUIFAPdHnDFFbhV3N2vWThRTBRJjWLVExQMiDOsyq6KnOb2Y_jMW8Yy_rFWz5WfH6KYfHyZ8MtwXE00RvjL8u55w4tF3_Z0bHfGjs7Ci2fJ3PNC0IxBdhuNV5eiqq-paC3b2DMfUohomM_AATJhb1sx-VQLPiZsqGEvAwFG7P7R8xgUGTSTgnwwen9GorVhBUwpegREfELcXnbDDeQ==';
+    var ARCHIVIO = 'https://ivanmartellato.com/wakeupsouls/candidatura.php';
+    // Copia per il tracciamento di Reality Architecture (web app Google Sheet). Vuoto = non attivo.
+    var FOGLIO = '';
+
+    var form = document.getElementById('wus-form');
+
+    // utm dalla barra degli indirizzi (o dal giro precedente) nei campi nascosti
+    (function () {
+      var q = new URLSearchParams(location.search), salva = {};
+      try { salva = JSON.parse(sessionStorage.getItem('wus_utm') || '{}'); } catch (e) {}
+      ['utm_source', 'utm_campaign', 'utm_content'].forEach(function (k) {
+        var v = q.get(k) || salva[k] || '';
+        salva[k] = v; if (form.elements[k]) form.elements[k].value = v;
+      });
+      try { sessionStorage.setItem('wus_utm', JSON.stringify(salva)); } catch (e) {}
+    })();
+
+    var done = document.getElementById('wus-done');
+    var bottone = form.querySelector('button[type=submit]');
+    var avviso = document.getElementById('invio-err');
+    var emailOk = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); };
+
+    // Paesi e prefissi del modulo Brevo
+    var PAESI = 'Afghanistan:93|Albania:355|Algeria:213|Andorra:376|Angola:244|Anguilla:1264|Antigua e Barbuda:1268|Arabia Saudita:966|Argentina:54|Armenia:374|Aruba:297|Australia:61|Austria:43|Azerbaigian:994|Bahamas:1242|Bahrein:973|Bangladesh:880|Barbados:1246|Belgio:32|Belize:501|Benin:229|Bermuda:1441|Bhutan:975|Bielorussia:375|Bolivia:591|Bosnia ed Erzegovina:387|Botswana:267|Brasile:55|Brunei:673|Bulgaria:359|Burkina Faso:226|Burundi:257|Cambogia:855|Camerun:237|Canada:1|Capo Verde:238|Caraibi Olandesi:599|Ceuta e Melilla:34|Ciad:235|Cile:56|Cina:86|Cipro:357|Città del Vaticano:379|Colombia:57|Comore:269|Congo:242|Corea del Nord:850|Corea del Sud:82|Costa d’Avorio:225|Costa Rica:506|Croazia:385|Cuba:53|Curaçao:599|Danimarca:45|Dominica:1767|Ecuador:593|Egitto:20|El Salvador:503|Emirati Arabi Uniti:971|Eritrea:291|Estonia:372|Eswatini:268|Etiopia:251|Figi:679|Filippine:63|Finlandia:358|Francia:33|Gabon:241|Gambia:220|Georgia:995|Germania:49|Ghana:233|Giamaica:1876|Giappone:81|Gibilterra:350|Gibuti:253|Giordania:962|Grecia:30|Grenada:1473|Groenlandia:299|Guadalupa:590|Guam:1671|Guatemala:502|Guernsey:44|Guinea:224|Guinea Equatoriale:240|Guinea-Bissau:245|Guyana:592|Guyana Francese:594|Haiti:509|Honduras:504|Hong Kong:852|India:91|Indonesia:62|Iran:98|Iraq:964|Irlanda:353|Islanda:354|Isola Christmas:61|Isola di Man:44|Isola Norfolk:672|Isole Åland:358|Isole Canarie:34|Isole Cayman:1345|Isole Cocos (Keeling):61|Isole Cook:682|Isole Fær Øer:298|Isole Falkland:500|Isole Marianne Settentrionali:1670|Isole Marshall:692|Isole Pitcairn:64|Isole Salomone:677|Isole Turks e Caicos:1649|Isole Vergini Americane:1340|Isole Vergini Britanniche:1284|Israele:972|Italia:39|Jersey:44|Kazakistan:7|Kenya:254|Kirghizistan:996|Kiribati:686|Kosovo:383|Kuwait:965|Laos:856|Lesotho:266|Lettonia:371|Libano:961|Liberia:231|Libia:218|Liechtenstein:423|Lituania:370|Lussemburgo:352|Macao:853|Macedonia del Nord:389|Madagascar:261|Malawi:265|Malaysia:60|Maldive:960|Mali:223|Malta:356|Marocco:212|Martinica:596|Mauritania:222|Mauritius:230|Mayotte:262|Messico:52|Micronesia:691|Moldavia:373|Monaco:377|Mongolia:976|Montenegro:382|Montserrat:1664|Mozambico:258|Myanmar (Birmania):95|Namibia:264|Nauru:674|Nepal:977|Nicaragua:505|Niger:227|Nigeria:234|Niue:683|Norvegia:47|Nuova Caledonia:687|Nuova Zelanda:64|Oman:968|Paesi Bassi:31|Pakistan:92|Palau:680|Palestina:970|Panama:507|Papua Nuova Guinea:675|Paraguay:595|Perù:51|Polinesia Francese:689|Polonia:48|Portogallo:351|Portorico:1787|Qatar:974|Regno Unito:44|Repubblica Ceca:420|Repubblica Centrafricana:236|Repubblica Democratica del Congo:243|Repubblica Dominicana:1809|Repubblica Dominicana:1829|Repubblica Dominicana:1849|Riunione:262|Romania:40|Ruanda:250|Russia:7|Sahara Occidentale:212|Saint Kitts e Nevis:1869|Saint Lucia:1758|Saint Martin:590|Saint Vincent e Grenadine:1784|Saint-Barthélemy:590|Saint-Pierre e Miquelon:508|Samoa:685|Samoa Americane:1684|San Marino:378|Sant’Elena:290|São Tomé e Príncipe:239|Senegal:221|Serbia:381|Seychelles:248|Sierra Leone:232|Singapore:65|Sint Maarten:1721|Siria:963|Slovacchia:421|Slovenia:386|Somalia:252|Spagna:34|Sri Lanka:94|Stati Uniti:1|Sud Sudan:211|Sudafrica:27|Sudan:249|Suriname:597|Svalbard e Jan Mayen:47|Svezia:46|Svizzera:41|Tagikistan:992|Taiwan:886|Tanzania:255|Thailandia:66|Timor Est:670|Togo:228|Tokelau:690|Tonga:676|Trinidad e Tobago:1868|Tunisia:216|Turchia:90|Turkmenistan:993|Tuvalu:688|Ucraina:380|Uganda:256|Ungheria:36|Uruguay:598|Uzbekistan:998|Vanuatu:678|Venezuela:58|Vietnam:84|Wallis e Futuna:681|Yemen:967|Zambia:260|Zimbabwe:263'.split('|').map(function (p) {
+      p = p.split(':');
+      return { nome: p[0], prefisso: '+' + p[1] };
+    });
+
+    // Prefissi unici, dal più lungo
+    var PREFISSI = [];
+    PAESI.forEach(function (p) {
+      var c = p.prefisso.slice(1);
+      if (PREFISSI.indexOf(c) < 0) PREFISSI.push(c);
+    });
+    PREFISSI.sort(function (a, b) { return b.length - a.length; });
+
+    // Menu: aperto i Paesi, chiuso il prefisso
+    var scelta = form.elements.prefisso;
+    var vistaPrefisso = document.getElementById('prefisso-vis');
+    var campoTel = form.elements.whatsapp;
+    var mostraPrefisso = function () { vistaPrefisso.textContent = scelta.value; };
+    scelta.textContent = '';
+    PAESI.forEach(function (p) {
+      var o = document.createElement('option');
+      o.value = p.prefisso;
+      o.textContent = p.nome + ' ' + p.prefisso;
+      o.selected = p.nome === 'Italia';
+      scelta.appendChild(o);
+    });
+    mostraPrefisso();
+    scelta.addEventListener('change', mostraPrefisso);
+
+    // "393331234567" → "+39" e "3331234567"
+    var dividiNumero = function (cifre) {
+      for (var i = 0; i < PREFISSI.length; i++) {
+        if (cifre.indexOf(PREFISSI[i]) === 0) {
+          return { prefisso: '+' + PREFISSI[i], numero: cifre.slice(PREFISSI[i].length) };
+        }
+      }
+      return null;
+    };
+
+    // +41… o 0041…: il prefisso passa nel menu
+    campoTel.addEventListener('change', function () {
+      var v = campoTel.value.replace(/[\s.\-()\/]/g, '');
+      if (!/^(\+|00)\d+$/.test(v)) return;
+      var tel = dividiNumero(v.replace(/^(\+|00)/, ''));
+      if (!tel || tel.numero.length < 4) return;
+      if (scelta.value !== tel.prefisso) { scelta.value = tel.prefisso; mostraPrefisso(); }
+      campoTel.value = tel.numero;
+    });
+
+    // Prefissi che tengono lo 0 iniziale
+    var CON_ZERO = ['+39', '+378', '+379', '+225', '+229', '+241', '+242'];
+
+    // { prefisso, numero } o null se non valido
+    var leggiNumero = function () {
+      var v = campoTel.value.replace(/[\s.\-()\/]/g, '');
+      var tel = /^(\+|00)/.test(v) ? dividiNumero(v.replace(/^(\+|00)/, '')) : { prefisso: scelta.value, numero: v };
+      if (!tel || !/^\d+$/.test(tel.numero)) return null;
+      if (tel.prefisso === '+39') {
+        tel.numero = tel.numero.replace(/^39(3\d{8,9})$/, '$1');   // 39 senza +
+        return /^(3\d{8,9}|0\d{5,10})$/.test(tel.numero) ? tel : null;
+      }
+      // +7 e +1: con 11 cifre la prima è il prefisso ripetuto o l'8
+      if ((tel.prefisso === '+7' && /^[78]\d{10}$/.test(tel.numero)) || (tel.prefisso === '+1' && /^1\d{10}$/.test(tel.numero))) tel.numero = tel.numero.slice(1);
+      else if (CON_ZERO.indexOf(tel.prefisso) < 0) tel.numero = tel.numero.replace(/^0+/, '');
+      var cifre = tel.prefisso.length - 1 + tel.numero.length;
+      return cifre >= 8 && cifre <= 15 ? tel : null;
+    };
+
+    // 1990-01-31 → 31/01/1990
+    var dataItaliana = function (v) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+      return m ? m[3] + '/' + m[2] + '/' + m[1] : v;
+    };
+
+    var valore = function (nome) { return form.elements[nome].value.trim(); };
+
+    // A Brevo solo i contatti. Solo un numero non valido ferma l'invio
+    var iscriviABrevo = function (tel) {
+      var corpo = new FormData();
+      corpo.append('EMAIL', valore('email').toLowerCase());
+      corpo.append('FIRSTNAME', valore('nome'));
+      corpo.append('LASTNAME', valore('cognome'));
+      corpo.append('SMS__COUNTRY_CODE', tel.prefisso);
+      corpo.append('SMS', tel.numero);
+      corpo.append('email_address_check', '');   // anti-spam Brevo, vuoto
+      corpo.append('locale', 'it');
+      corpo.append('html_type', 'simple');
+      return fetch(BREVO, { method: 'POST', body: corpo }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (esito) {
+          esito = esito || {};
+          if (r.ok && esito.success !== false) return 'ok';
+          var sms = String((esito.errors || {}).SMS || '');
+          if (/already|exist|linked/i.test(sms)) return 'numero già su un altro contatto';
+          if (sms) {
+            var errore = new Error('Numero rifiutato (' + r.status + ')');
+            errore.numero = true;
+            throw errore;
+          }
+          return 'risposta ' + r.status;
+        });
+      }, function () { return 'Brevo non raggiungibile'; });
+    };
+
+    // Candidatura completa: { ok: true } o i campi da correggere
+    var archivia = function (tel, brevo) {
+      var corpo = new FormData(form);
+      corpo.set('email', valore('email').toLowerCase());
+      corpo.set('whatsapp', tel.prefisso + ' ' + tel.numero);
+      corpo.set('data_nascita', dataItaliana(valore('data_nascita')));
+      corpo.append('brevo', brevo);
+      // Da realityarchitecture.it la risposta di candidatura.php non è leggibile (niente CORS): invio «no-cors»
+      var copia = new FormData();
+      corpo.forEach(function (v, k) { copia.append(k, v); });
+      if (FOGLIO) fetch(FOGLIO, { method: 'POST', mode: 'no-cors', body: copia }).catch(function () {});
+      return fetch(ARCHIVIO, { method: 'POST', mode: 'no-cors', body: corpo }).then(function () {}, function () {
+        throw new Error('Candidatura non salvata (rete)');
+      });
+    };
+
+    var invia = function (tel) {
+      if (!BREVO || !ARCHIVIO) return Promise.reject(new Error('Modulo non collegato'));
+      return iscriviABrevo(tel).then(function (brevo) { return archivia(tel, brevo); });
+    };
+
+    var errTel = document.getElementById('err-whatsapp');
+    var TESTO_ERR_TEL = errTel.textContent;
+
+    var conferma = function () {
+      form.style.display = 'none';
+      done.classList.add('show');
+      done.focus();
+      done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (bottone.disabled) return;
+      errTel.textContent = TESTO_ERR_TEL;
+      avviso.hidden = true;
+
+      var first = null;
+      form.querySelectorAll('[required]').forEach(function (el) {
+        var f = el.closest('.field');
+        var ok = el.type === 'checkbox' ? el.checked
+               : el.type === 'email' ? emailOk(el.value.trim())
+               : el.type === 'tel' ? leggiNumero() !== null
+               : el.value.trim() !== '';
+        if (f) f.classList.toggle('invalid', !ok);
+        if (!ok && !first) first = el;
+      });
+      if (first) { first.focus(); return; }
+
+      // Campo trappola: lo compilano solo i bot
+      if (form.elements.sito.value) { conferma(); return; }
+
+      var testo = bottone.textContent;
+      bottone.disabled = true;
+      bottone.textContent = 'Un attimo…';
+
+      invia(leggiNumero()).then(conferma, function (errore) {
+        // Errore sotto il campo da correggere
+        var campo = null;
+        if (errore && errore.numero) {
+          campo = form.elements.whatsapp;
+          errTel.textContent = 'Questo numero non risulta valido: controlla il prefisso e le cifre.';
+        } else if (errore && errore.campi) {
+          errore.campi.some(function (nome) {
+            campo = form.elements[nome] || null;
+            return !!campo;
+          });
+        }
+        if (campo) {
+          campo.closest('.field').classList.add('invalid');
+          campo.focus();
+          return;
+        }
+        avviso.textContent = 'La candidatura non è partita. Controlla la connessione e riprova tra un momento.';
+        avviso.hidden = false;
+      }).then(function () {
+        bottone.disabled = false;
+        bottone.textContent = testo;
+      });
+    });
+
+    form.addEventListener('input', function (e) {
+      var f = e.target.closest('.field');
+      if (f && f.classList.contains('invalid')) f.classList.remove('invalid');
+    });
+  })();
+</script>
+
+<script>
+  // 17/11: finché candidatura.php di Ivan non accetta realityarchitecture.it (oggi 403), la candidatura si compila sulla pagina di Ivan con gli stessi utm.
+  (function () {
+    var MODULO_NOSTRO = false;
+    var form = document.getElementById('wus-form'), est = document.getElementById('wus-esterno');
+    if (MODULO_NOSTRO) { est.hidden = true; return; }
+    form.style.display = 'none';
+    var q = new URLSearchParams(location.search), s = {};
+    try { s = JSON.parse(sessionStorage.getItem('wus_utm') || '{}'); } catch (e) {}
+    var p = new URLSearchParams();
+    ['utm_source', 'utm_campaign', 'utm_content'].forEach(function (k) { var v = q.get(k) || s[k]; if (v) p.set(k, v); });
+    p.set('ref', 'realityarchitecture');
+    document.getElementById('wus-esterno-btn').href = 'https://ivanmartellato.com/wakeupsouls/?' + p.toString() + '#candidatura';
+  })();
+</script>
+</body>
+</html>
