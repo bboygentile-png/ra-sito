@@ -1380,8 +1380,6 @@
     // Contatti a Brevo, candidatura completa a candidatura.php
     var BREVO = 'https://526f7617.sibforms.com/serve/MUIFAPdHnDFFbhV3N2vWThRTBRJjWLVExQMiDOsyq6KnOb2Y_jMW8Yy_rFWz5WfH6KYfHyZ8MtwXE00RvjL8u55w4tF3_Z0bHfGjs7Ci2fJ3PNC0IxBdhuNV5eiqq-paC3b2DMfUohomM_AATJhb1sx-VQLPiZsqGEvAwFG7P7R8xgUGTSTgnwwen9GorVhBUwpegREfELcXnbDDeQ==';
     var ARCHIVIO = 'https://ivanmartellato.com/wakeupsouls/candidatura.php';
-    // Copia per il tracciamento di Reality Architecture (web app Google Sheet). Vuoto = non attivo.
-    var FOGLIO = '';
 
     var form = document.getElementById('wus-form');
 
@@ -1512,12 +1510,15 @@
       corpo.set('whatsapp', tel.prefisso + ' ' + tel.numero);
       corpo.set('data_nascita', dataItaliana(valore('data_nascita')));
       corpo.append('brevo', brevo);
-      // Da realityarchitecture.it la risposta di candidatura.php non è leggibile (niente CORS): invio «no-cors»
-      var copia = new FormData();
-      corpo.forEach(function (v, k) { copia.append(k, v); });
-      if (FOGLIO) fetch(FOGLIO, { method: 'POST', mode: 'no-cors', body: copia }).catch(function () {});
-      return fetch(ARCHIVIO, { method: 'POST', mode: 'no-cors', body: corpo }).then(function () {}, function () {
-        throw new Error('Candidatura non salvata (rete)');
+      // 18/11: candidatura.php di Ivan accetta realityarchitecture.it con CORS e salva pagina e utm (Simone). Nessuna copia nostra: i dati restano a Ivan.
+      return fetch(ARCHIVIO, { method: 'POST', body: corpo }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (esito) {
+          esito = esito || {};
+          if (r.ok && esito.ok) return;
+          var errore = new Error('Candidatura non salvata (' + r.status + ')');
+          errore.campi = esito.campi || [];
+          throw errore;
+        });
       });
     };
 
@@ -1596,7 +1597,7 @@
 <script>
   // 17/11: finché candidatura.php di Ivan non accetta realityarchitecture.it (oggi 403), la candidatura si compila sulla pagina di Ivan con gli stessi utm.
   (function () {
-    var MODULO_NOSTRO = false;
+    var MODULO_NOSTRO = true;
     var form = document.getElementById('wus-form'), est = document.getElementById('wus-esterno');
     if (MODULO_NOSTRO) { est.hidden = true; return; }
     form.style.display = 'none';
